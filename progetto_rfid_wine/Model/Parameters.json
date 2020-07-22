@@ -1,0 +1,80 @@
+{
+    "parameters": [
+        {
+            "expr": "40000",
+            "name": "A_DIEL",
+            "value": "40000"
+        },
+        {
+            "expr": "120000",
+            "name": "B_DIEL",
+            "value": "120000"
+        },
+        {
+            "expr": "10000",
+            "name": "A",
+            "value": "10000"
+        },
+        {
+            "expr": "50000",
+            "name": "B",
+            "value": "50000"
+        },
+        {
+            "expr": "500",
+            "name": "G",
+            "value": "500"
+        },
+        {
+            "expr": "100",
+            "name": "H_DIEL",
+            "value": "100"
+        },
+        {
+            "expr": "50",
+            "name": "TD",
+            "value": "50"
+        },
+        {
+            "expr": "50000",
+            "name": "R_BOTTLE",
+            "value": "50000"
+        },
+        {
+            "expr": "7000",
+            "name": "W_GLASS",
+            "value": "7000"
+        },
+        {
+            "expr": "200000",
+            "name": "H_BOTTLE",
+            "value": "200000"
+        },
+        {
+            "expr": "7",
+            "name": "E_glass",
+            "value": "7"
+        },
+        {
+            "expr": "25",
+            "name": "E_WINE",
+            "value": "25"
+        },
+        {
+            "expr": "2",
+            "name": "tgD_WINE",
+            "value": "2"
+        },
+        {
+            "expr": "0",
+            "name": "tau",
+            "value": "0"
+        },
+        {
+            "expr": "0",
+            "name": "dist",
+            "value": "0"
+        }
+    ],
+    "version": 1
+}
