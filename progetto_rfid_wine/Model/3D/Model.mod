@@ -23,16 +23,11 @@ With Units
     .Conductance "Siemens"
     .Capacitance "F"
 End With
-
 '----------------------------------------------------------------------------
-
 'set the frequency range
 Solver.FrequencyRange "800", "1200"
-
 '----------------------------------------------------------------------------
-
 Plot.DrawBox True
-
 With Background
      .Type "Normal"
      .Epsilon "1.0"
@@ -44,7 +39,6 @@ With Background
      .ZminSpace "0.0"
      .ZmaxSpace "0.0"
 End With
-
 With Boundary
      .Xmin "expanded open"
      .Xmax "expanded open"
@@ -56,19 +50,13 @@ With Boundary
      .Ysymmetry "none"
      .Zsymmetry "none"
 End With
-
 ' switch on FD-TET setting for accurate farfields
-
 FDSolver.ExtrudeOpenBC "True"
-
 MeshSettings.SetMeshType "HexTLM"
-
 With MeshSettings
      .Set "RatioLimitGeometry", "20"
 End With
-
 ' optimize mesh settings for planar structures
-
 With Mesh
      .MergeThinPECLayerFixpoints "True"
      .RatioLimit "20"
@@ -76,42 +64,33 @@ With Mesh
      .ConsiderSpaceForLowerMeshLimit "False"
      .MinimumStepNumber "5"
 End With
-
 With MeshSettings
      .SetMeshType "Hex"
      .Set "RatioLimitGeometry", "20"
      .Set "EdgeRefinementOn", "1"
      .Set "EdgeRefinementRatio", "6"
 End With
-
 With MeshSettings
      .SetMeshType "Tet"
      .Set "VolMeshGradation", "1.5"
      .Set "SrfMeshGradation", "1.5"
 End With
-
 With FDSolver
 	.ExtrudeOpenBC "False"
 End With
-
 ' change mesh adaption scheme to energy
 ' 		(planar structures tend to store high energy
 '     	 locally at edges rather than globally in volume)
-
 MeshAdaption3D.SetAdaptionStrategy "Energy"
-
 PostProcess1D.ActivateOperation "vswr", "true"
 PostProcess1D.ActivateOperation "yz-matrices", "true"
-
 With FarfieldPlot
 	.ClearCuts ' lateral=phi, polar=theta
 	.AddCut "lateral", "0", "1"
 	.AddCut "lateral", "90", "1"
 	.AddCut "polar", "90", "1"
 End With
-
 '----------------------------------------------------------------------------
-
 Dim sDefineAt As String
 sDefineAt = "868.6;915;953;954.2"
 Dim sDefineAtName As String
@@ -122,15 +101,12 @@ Dim aFreq() As String
 aFreq = Split(sDefineAt, ";")
 Dim aNames() As String
 aNames = Split(sDefineAtName, ";")
-
 Dim nIndex As Integer
 For nIndex = LBound(aFreq) To UBound(aFreq)
-
 Dim zz_val As String
 zz_val = aFreq (nIndex)
 Dim zz_name As String
 zz_name = sDefineAtToken & aNames (nIndex)
-
 ' Define E-Field Monitors
 With Monitor
     .Reset
@@ -141,7 +117,6 @@ With Monitor
     .MonitorValue  zz_val
     .Create
 End With
-
 ' Define H-Field Monitors
 With Monitor
     .Reset
@@ -152,7 +127,6 @@ With Monitor
     .MonitorValue  zz_val
     .Create
 End With
-
 ' Define Farfield Monitors
 With Monitor
     .Reset
@@ -163,27 +137,18 @@ With Monitor
     .ExportFarfieldSource "False"
     .Create
 End With
-
 Next
-
 '----------------------------------------------------------------------------
-
 With MeshSettings
      .SetMeshType "Hex"
      .Set "Version", 1%
 End With
-
 With Mesh
      .MeshType "PBA"
 End With
-
 'set the solver type
 ChangeSolverType("HF Time Domain")
-
 '----------------------------------------------------------------------------
-
-
-
 
 '@ define material: adesive_paper
 
@@ -252,14 +217,12 @@ With Material
      .Transparentoutline "False" 
      .Transparency "0" 
      .Create
-End With 
-
+End With
 
 '@ new component: component1
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Component.New "component1" 
-
+Component.New "component1"
 
 '@ define brick: component1:DIELETTRICO
 
@@ -274,7 +237,6 @@ With Brick
      .Zrange "-H_DIEL", "0" 
      .Create
 End With
-
 
 '@ define material: Aluminum
 
@@ -337,8 +299,7 @@ With Material
 .Transparentoutline "False"
 .Transparency "0"
 .Create
-End With 
-
+End With
 
 '@ define brick: component1:DIPOLO
 
@@ -354,6 +315,23 @@ With Brick
      .Create
 End With
 
+'@ transform: mirror component1:DIPOLO
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:DIPOLO" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "1", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
 
 '@ transform: mirror component1:DIPOLO
 
@@ -371,45 +349,22 @@ With Transform
      .Destination "" 
      .Material "" 
      .Transform "Shape", "Mirror" 
-End With 
-
-
-'@ transform: mirror component1:DIPOLO
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:DIPOLO" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "0", "1", "0" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With 
-
+End With
 
 '@ delete shape: component1:DIPOLO_2
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.Delete "component1:DIPOLO_2" 
-
+Solid.Delete "component1:DIPOLO_2"
 
 '@ rename block: component1:DIPOLO to: component1:DIPOLO A
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Solid.Rename "component1:DIPOLO", "DIPOLO A"
 
-
 '@ rename block: component1:DIPOLO_1 to: component1:DIPOLO B
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Solid.Rename "component1:DIPOLO_1", "DIPOLO B"
-
 
 '@ change material and color: component1:DIPOLO A to: Aluminum
 
@@ -417,55 +372,46 @@ Solid.Rename "component1:DIPOLO_1", "DIPOLO B"
 Solid.SetUseIndividualColor "component1:DIPOLO A", 1
 Solid.ChangeIndividualColor "component1:DIPOLO A", "192", "192", "192"
 
-
 '@ change material and color: component1:DIPOLO B to: Aluminum
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Solid.SetUseIndividualColor "component1:DIPOLO B", 1
 Solid.ChangeIndividualColor "component1:DIPOLO B", "192", "192", "192"
 
-
 '@ activate local coordinates
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 WCS.ActivateWCS "local"
 
-
 '@ move wcs
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL" 
-
+WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL"
 
 '@ rotate wcs
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.RotateWCS "v", "180" 
-
-
-'@ move wcs
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL" 
-
+WCS.RotateWCS "v", "180"
 
 '@ move wcs
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "H_DIEL" 
-
-
-'@ move wcs
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "H_DIEL" 
-
+WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL"
 
 '@ move wcs
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL" 
+WCS.MoveWCS "local", "0.0", "0.0", "H_DIEL"
 
+'@ move wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.MoveWCS "local", "0.0", "0.0", "H_DIEL"
+
+'@ move wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL"
 
 '@ perform cylindrical bending
 
@@ -475,8 +421,6 @@ With Bending
     .CylindricalBend "component1:DIPOLO A", "True", "0", "50000", "-1"
     .CylindricalBend "component1:DIPOLO B", "True", "0", "50000", "-1"
 End With
-
-
 
 '@ define material: material1
 
@@ -545,14 +489,12 @@ With Material
      .Transparentoutline "False" 
      .Transparency "90" 
      .Create
-End With 
-
+End With
 
 '@ new component: BOTTIGLIA
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Component.New "BOTTIGLIA" 
-
+Component.New "BOTTIGLIA"
 
 '@ define cylinder: BOTTIGLIA:VETRO
 
@@ -570,8 +512,7 @@ With Cylinder
      .Zcenter "R_BOTTLE+H_DIEL" 
      .Segments "0" 
      .Create 
-End With 
-
+End With
 
 '@ define material: WINE
 
@@ -640,8 +581,7 @@ With Material
      .Transparentoutline "False" 
      .Transparency "50" 
      .Create
-End With 
-
+End With
 
 '@ define cylinder: BOTTIGLIA:WINE
 
@@ -659,14 +599,12 @@ With Cylinder
      .Zcenter "R_BOTTLE+H_DIEL" 
      .Segments "0" 
      .Create 
-End With 
-
+End With
 
 '@ rename component: component1 to: TAG_RFID
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Component.Rename "component1", "TAG_RFID"
-
 
 '@ define discrete port: 1
 
@@ -692,12 +630,10 @@ With DiscretePort
      .Create 
 End With
 
-
 '@ define time domain solver parameters
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -714,7 +650,6 @@ With Solver
      .SuperimposePLWExcitation "False"
      .UseSensitivityAnalysis "False"
 End With
-
 
 '@ set PBA version
 

@@ -5,7 +5,7 @@
 [Author]
 robyr
 [Mesh Cells]
-246,064
+251,472
 [Mesh Type]
 Hexahedral
 [Last Problem Type]
@@ -17,5 +17,5 @@ t
 [Results]
 Time Domain: S-Parameter
 [Modeler Unique ID]
-5:progetto_rfid_wine.cst?9d4b5eba9e7db39b1c5cdcf4de4a1184?14536:numberofparameters=13:port=1>mode=1>zre=0>zim=0:::tgd_wine?e_wine?e_glass?h_bottle?w_glass?r_bottle?td?h_diel?g?b?a?b_diel?a_diel
+5:progetto_rfid_wine.cst?9d4b5eba9e7db39b1c5cdcf4de4a1184?14536:numberofparameters=13:port=1>mode=1>zre=0>zim=0:::a?a_diel?b?b_diel?e_wine?e_glass?g?h_bottle?h_diel?r_bottle?td?w_glass?tgd_wine
 [Comment]

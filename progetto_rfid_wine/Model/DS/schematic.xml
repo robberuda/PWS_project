@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SchematicTopology Version="2.3" Seed="1" Grid="25">
-    <BasePath>C:/Users/robyr/Desktop/UNI2/Pervasive wireless system (Mazza)/progetto mazza/progetto_rfid_wine/Model/DS</BasePath>
+    <BasePath>C:/Users/robyr/Documents/GitHub/PWS_project/progetto_rfid_wine/Model/DS</BasePath>
     <Block ForeignId="116280213" Id="1" Class="MWSSCHEM">
         <Size Height="150" Width="150"/>
         <Pins>
@@ -8,7 +8,7 @@
                 <Label>1</Label>
             </Pin>
         </Pins>
-        <Image Scale="AutoFit" FileName="C:\Users\robyr\Desktop\UNI2\Pervasive wireless system (Mazza)\progetto mazza\progetto_rfid_wine\Model\3D\Model.dib"/>
+        <Image Scale="AutoFit" FileName="../3D/Model.dib"/>
         <Pos X="75" Y="75"/>
         <ToolTip>CST MICROWAVE STUDIO schematic block MWSSCHEM1</ToolTip>
     </Block>
