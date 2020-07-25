@@ -1,0 +1,56 @@
+25/Jul/2020 11:34:12  Some of the upcoming parameter combinations were already performed previously and will be skipped.
+                      Potential changes in the result settings like Template Based Post Processing are not taken into account. The feature can be deactivated via "Parameter Sweep -> Options..."
+25/Jul/2020 11:34:12  ==========================================================================
+                      Sequence: Sequence 1
+                      ==========================================================================
+
+25/Jul/2020 11:34:12  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 35000
+25/Jul/2020 11:34:12  
+                      Simulation for this parameter combination has already been performed (Run ID found).
+25/Jul/2020 11:34:12  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 34000
+25/Jul/2020 11:34:14  
+                      Structure update: Successful
+25/Jul/2020 11:35:50            Solver: Successful
+25/Jul/2020 11:35:50       Solver time: 0 hours, 1 min., 36 sec.
+25/Jul/2020 11:35:50  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 33000
+25/Jul/2020 11:35:55  
+                      Structure update: Successful
+25/Jul/2020 11:37:37            Solver: Successful
+25/Jul/2020 11:37:37       Solver time: 0 hours, 1 min., 42 sec.
+25/Jul/2020 11:37:37  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 32000
+25/Jul/2020 11:37:41  
+                      Structure update: Successful
+25/Jul/2020 11:39:23            Solver: Successful
+25/Jul/2020 11:39:23       Solver time: 0 hours, 1 min., 42 sec.
+25/Jul/2020 11:39:23  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 31000
+25/Jul/2020 11:39:27  
+                      Structure update: Successful
+25/Jul/2020 11:41:02            Solver: Successful
+25/Jul/2020 11:41:02       Solver time: 0 hours, 1 min., 35 sec.
+25/Jul/2020 11:41:02  --------------------------------------------------------------------------
+                      Parameter Values: 
+                      
+                         B = 30000
+25/Jul/2020 11:41:02  
+                      Simulation for this parameter combination has already been performed (Run ID found).
+25/Jul/2020 11:41:02  --------------------------------------------------------------------------
+25/Jul/2020 11:41:02  2 parameter combinations were skipped in the parameter sweep because they were already performed previously.
+25/Jul/2020 11:41:02  
+                      ==========================================================================
+                      Total evaluation time: 0 hours, 6 min., 35 sec.
+                      ==========================================================================

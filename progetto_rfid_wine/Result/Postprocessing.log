@@ -9,12 +9,11 @@ Units settings:
 
 ----------------------------------------------------------------------------------------
 
-Template based postprocessing started at: 07:05 PM Wednesday, 22. July 2020
+Template based postprocessing started at: 11:41 AM Saturday, 25. July 2020
 
-  Error: Re requires 1 parameter. Please check expression.
-  Evaluating 'Re(Ztag)': 6 s
+  Evaluating 'tau': 0 s
 
-  Total time: 6 s  ( = 0 h, 0 m, 6 s )
+  Total time: 0 s  ( = 0 h, 0 m, 0 s )
 
-Template based postprocessing finished at: 07:06 PM Wednesday, 22. July 2020
+Template based postprocessing finished at: 11:41 AM Saturday, 25. July 2020
 ----------------------------------------------------------------------------------------

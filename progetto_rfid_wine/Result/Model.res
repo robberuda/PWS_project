@@ -1,5 +1,13 @@
 MWS Result File Version 20150206
-size=i:122
+size=i:124
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:tau.rd1
 
 type=s:DATA_FOLDER
 problemclass=s::8:1000
@@ -574,6 +582,49 @@ parametric=s:P
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
 
+type=s:TABLE
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\tau
+files=s:tau.rt1
+files=s:tau.rd1
+title=s:tau
+ylabel=s:tau(f)
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:persistent
+result=s:1
+treepath=s:1D Results\Materials\WINE\Dispersive\Eps'
+files=s:WINE_eps_re.sig
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:persistent
+result=s:1
+treepath=s:1D Results\Materials\WINE\Dispersive\Eps''
+files=s:WINE_eps_im.sig
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:persistent
+result=s:1
+treepath=s:1D Results\Materials\WINE\Dispersive\Eps TangD
+files=s:WINE_eps_tgd.sig
+
 type=s:XYSIGNAL2
 subtype=s:user
 problemclass=s::8:1000
@@ -613,36 +664,6 @@ lifetime=s:persistent
 result=s:1
 treepath=s:1D Results\Materials\Aluminum\Surface Impedance\Z'' (Theory)
 files=s:Aluminum_Z_datalist_im.sig
-
-type=s:XYSIGNAL2
-subtype=s:user
-problemclass=s::8:1000
-visibility=s:visible
-creation=s:internal
-lifetime=s:persistent
-result=s:1
-treepath=s:1D Results\Materials\WINE\Dispersive\Eps'
-files=s:WINE_eps_re.sig
-
-type=s:XYSIGNAL2
-subtype=s:user
-problemclass=s::8:1000
-visibility=s:visible
-creation=s:internal
-lifetime=s:persistent
-result=s:1
-treepath=s:1D Results\Materials\WINE\Dispersive\Eps''
-files=s:WINE_eps_im.sig
-
-type=s:XYSIGNAL2
-subtype=s:user
-problemclass=s::8:1000
-visibility=s:visible
-creation=s:internal
-lifetime=s:persistent
-result=s:1
-treepath=s:1D Results\Materials\WINE\Dispersive\Eps TangD
-files=s:WINE_eps_tgd.sig
 
 type=s:XYSIGNAL2
 subtype=s:user

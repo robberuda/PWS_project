@@ -2,8 +2,23 @@
     "parameter sweep": {
         "options": {
             "restore parameter values after run": "false",
+            "simulation type": "Transient",
             "skip existing combinations": "true",
             "start active solver": "true"
+        },
+        "sequences": {
+            "Sequence 1": [
+                {
+                    "from": "3.5e+04",
+                    "samples": "6",
+                    "to": "3.0e+04",
+                    "type": "linear",
+                    "varname": "B"
+                },
+                {
+                    "index": 1
+                }
+            ]
         },
         "version": 1
     }

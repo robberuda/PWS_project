@@ -3,7 +3,7 @@
 '# length = um
 '# frequency = MHz
 '# time = ns
-'# frequency range: fmin = 800 fmax = 1200
+'# frequency range: fmin = 600 fmax = 2500
 '# created = '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 
 
@@ -655,4 +655,10 @@ End With
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 Discretizer.PBAVersion "2018092019"
+
+'@ define frequency range
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solver.FrequencyRange "600", "2500" 
+
 
