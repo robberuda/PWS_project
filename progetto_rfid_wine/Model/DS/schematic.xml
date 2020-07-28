@@ -5,7 +5,7 @@
         <Size Height="150" Width="150"/>
         <Pins>
             <Pin X="-75" Y="0" Index="0" BlockPosition="Left">
-                <Label>1</Label>
+                <Label>1 (CHIP_MONZA4)</Label>
             </Pin>
         </Pins>
         <Image Scale="AutoFit" FileName="../3D/Model.dib"/>

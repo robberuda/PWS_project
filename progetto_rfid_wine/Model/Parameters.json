@@ -3,29 +3,30 @@
         {
             "expr": "30000+A",
             "name": "A_DIEL",
-            "value": "40000"
+            "value": "32000"
         },
         {
-            "expr": "40000+B*2",
+            "expr": "40000+B*2+LS",
             "name": "B_DIEL",
-            "value": "102000"
+            "value": "104000"
         },
         {
-            "expr": "10000",
+            "expr": "2000",
             "name": "A",
-            "value": "10000"
+            "value": "2000"
         },
         {
-            "expr": "3.1e+04",
+            "expr": "32000",
             "name": "B",
-            "value": "3.1e+04"
+            "value": "32000"
         },
         {
-            "expr": "500",
+            "expr": "590",
             "name": "G",
-            "value": "500"
+            "value": "590"
         },
         {
+            "descr": "100um",
             "expr": "100",
             "name": "H_DIEL",
             "value": "100"
@@ -66,14 +67,54 @@
             "value": "2"
         },
         {
-            "expr": "0",
-            "name": "tau",
-            "value": "0"
+            "expr": "1650",
+            "name": "Rch",
+            "value": "1650"
+        },
+        {
+            "expr": "1.21E-12",
+            "name": "Cch",
+            "value": "1.21e-12"
         },
         {
             "expr": "0",
-            "name": "dist",
+            "name": "LS",
             "value": "0"
+        },
+        {
+            "expr": "1500",
+            "name": "W",
+            "value": "1500"
+        },
+        {
+            "expr": "1500",
+            "name": "WS",
+            "value": "1500"
+        },
+        {
+            "expr": "0",
+            "name": "L1",
+            "value": "0"
+        },
+        {
+            "expr": "1.2e+04",
+            "name": "L2",
+            "value": "1.2e+04"
+        },
+        {
+            "expr": "3000",
+            "name": "L3",
+            "value": "3000"
+        },
+        {
+            "expr": "LS/2+L2-G/2",
+            "name": "L4",
+            "value": "11705"
+        },
+        {
+            "expr": "A",
+            "name": "Aext",
+            "value": "2000"
         }
     ],
     "version": 1

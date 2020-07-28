@@ -509,7 +509,7 @@ With Cylinder
      .Axis "y" 
      .Yrange "-H_BOTTLE/2", "H_BOTTLE/2" 
      .Xcenter "0" 
-     .Zcenter "R_BOTTLE+H_DIEL" 
+     .Zcenter "R_BOTTLE" 
      .Segments "0" 
      .Create 
 End With
@@ -596,7 +596,7 @@ With Cylinder
      .Axis "y" 
      .Yrange "-H_BOTTLE/2", "H_BOTTLE/2" 
      .Xcenter "0" 
-     .Zcenter "R_BOTTLE+H_DIEL" 
+     .Zcenter "R_BOTTLE" 
      .Segments "0" 
      .Create 
 End With
@@ -615,7 +615,7 @@ With DiscretePort
      .Type "SParameter" 
      .Label "" 
      .Folder "" 
-     .Impedance "50.0" 
+     .Impedance "Rch" 
      .VoltagePortImpedance "0.0" 
      .Voltage "1.0" 
      .Current "1.0" 
@@ -659,6 +659,348 @@ Discretizer.PBAVersion "2018092019"
 '@ define frequency range
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solver.FrequencyRange "600", "2500" 
+Solver.FrequencyRange "600", "2500"
 
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:DIPOLO A", "1"
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:DIPOLO B", "1"
+
+'@ define lumped element: Folder1:capacità
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With LumpedElement
+     .Reset 
+     .SetName "capacità" 
+     .Folder "Folder1" 
+     .SetType "RLCSerial" 
+     .SetR  "0" 
+     .SetL  "0" 
+     .SetC  "Cch" 
+     .SetGs "0" 
+     .SetI0 "1e-14" 
+     .SetT  "300" 
+     .SetP1 "True", "-1002.9331346707", "250", "-139.97033432888" 
+     .SetP2 "True", "-1002.9331346707", "-250", "-139.97033432888" 
+     .SetInvert "False" 
+     .SetMonitor "True" 
+     .SetRadius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .CircuitFileName "" 
+     .CircuitId "1" 
+     .UseCopyOnly "True" 
+     .UseRelativePath "False" 
+     .Create
+End With
+
+'@ define brick: TAG_RFID:solid1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid1" 
+     .Component "TAG_RFID" 
+     .Material "WINE" 
+     .Xrange "A/2", "A/2+L1" 
+     .Yrange "LS/2", "LS/2+W" 
+     .Zrange "-TD-H_DIEL", "-H_DIEL" 
+     .Create
+End With
+
+'@ delete shape: TAG_RFID:solid1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Delete "TAG_RFID:solid1"
+
+'@ transform: translate TAG_RFID
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Transform 
+     .Reset 
+     .Name "TAG_RFID" 
+     .Vector "0", "200000", "0" 
+     .UsePickedPoints "False" 
+     .InvertPickedPoints "False" 
+     .MultipleObjects "False" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Transform "Shape", "Translate" 
+End With
+
+'@ delete port: port1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Port.Delete "1"
+
+'@ delete lumped element: Folder1:capacità
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+LumpedElement.Delete "Folder1:capacità"
+
+'@ move wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.MoveWCS "global", "0.0", "0.0", "0.0"
+
+'@ rotate wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.RotateWCS "v", "180"
+
+'@ move wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.MoveWCS "local", "0.0", "0.0", "H_DIEL"
+
+'@ define brick: TAG_RFID:DIELETTRICO2
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Brick
+     .Reset 
+     .Name "DIELETTRICO2" 
+     .Component "TAG_RFID" 
+     .Material "adesive_paper" 
+     .Xrange "-A_DIEL/2", "A_DIEL/2" 
+     .Yrange "-B_DIEL/2", "B_DIEL/2" 
+     .Zrange "-H_DIEL", "0" 
+     .Create
+End With
+
+'@ change material and color: TAG_RFID:DIELETTRICO2 to: adesive_paper
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.SetUseIndividualColor "TAG_RFID:DIELETTRICO2", 1
+Solid.ChangeIndividualColor "TAG_RFID:DIELETTRICO2", "128", "255", "255"
+
+'@ define extrude: TAG_RFID:METAL_SX
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Extrude 
+     .Reset 
+     .Name "METAL_SX" 
+     .Component "TAG_RFID" 
+     .Material "adesive_paper" 
+     .Mode "Pointlist" 
+     .Height "TD" 
+     .Twist "0.0" 
+     .Taper "0.0" 
+     .Origin "0.0", "0.0", "0.0" 
+     .Uvector "1.0", "0.0", "0.0" 
+     .Vvector "0.0", "1.0", "0.0" 
+     .Point "A/2", "LS/2" 
+     .LineTo "Aext/2", "LS/2+B" 
+     .LineTo "-A/2", "LS/2+B" 
+     .LineTo "-A/2", "LS/2+W" 
+     .LineTo "-A/2-L1", "LS/2+W" 
+     .LineTo "-A/2-L1", "LS/2" 
+     .Create 
+End With
+
+'@ define extrude: TAG_RFID:L_SHUNT
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Extrude 
+     .Reset 
+     .Name "L_SHUNT" 
+     .Component "TAG_RFID" 
+     .Material "Aluminum" 
+     .Mode "Pointlist" 
+     .Height "TD" 
+     .Twist "0.0" 
+     .Taper "0.0" 
+     .Origin "0.0", "0.0", "0.0" 
+     .Uvector "1.0", "0.0", "0.0" 
+     .Vvector "0.0", "1.0", "0.0" 
+     .Point "-A/2-L1", "LS/2" 
+     .LineTo "-A/2-L1", "LS/2+L2" 
+     .LineTo "-A/2-L1-W-L3-W", "LS/2+L2" 
+     .LineTo "-A/2-L1-W-L3-W", "G/2" 
+     .LineTo "-A/2-L1-W-L3", "G/2" 
+     .LineTo "-A/2-L1-W-L3", "LS/2+L2-W" 
+     .LineTo "-A/2-L1-W", "LS/2+L2-W" 
+     .LineTo "-A/2-L1-W", "LS/2" 
+     .Create 
+End With
+
+'@ rename block: TAG_RFID:L_SHUNT to: TAG_RFID:METAL2
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Rename "TAG_RFID:L_SHUNT", "METAL2"
+
+'@ change material and color: TAG_RFID:METAL_SX to: Aluminum
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.ChangeMaterial "TAG_RFID:METAL_SX", "Aluminum" 
+Solid.SetUseIndividualColor "TAG_RFID:METAL_SX", 1
+Solid.ChangeIndividualColor "TAG_RFID:METAL_SX", "192", "192", "192"
+
+'@ change material and color: TAG_RFID:METAL2 to: Aluminum
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.SetUseIndividualColor "TAG_RFID:METAL2", 1
+Solid.ChangeIndividualColor "TAG_RFID:METAL2", "192", "192", "192"
+
+'@ define brick: TAG_RFID:LSHUNT
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Brick
+     .Reset 
+     .Name "LSHUNT" 
+     .Component "TAG_RFID" 
+     .Material "Aluminum" 
+     .Xrange "-A/2-L1-WS", "-A/2-L1" 
+     .Yrange "LS/2", "-LS/2" 
+     .Zrange "0", "TD" 
+     .Create
+End With
+
+'@ transform: mirror TAG_RFID:METAL2
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Transform 
+     .Reset 
+     .Name "TAG_RFID:METAL2" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "1", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "True" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror TAG_RFID:METAL_SX
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Transform 
+     .Reset 
+     .Name "TAG_RFID:METAL_SX" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "1", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ change material and color: TAG_RFID:LSHUNT to: Aluminum
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.SetUseIndividualColor "TAG_RFID:LSHUNT", 1
+Solid.ChangeIndividualColor "TAG_RFID:LSHUNT", "192", "192", "192"
+
+'@ delete shapes
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Delete "TAG_RFID:DIELETTRICO" 
+Solid.Delete "TAG_RFID:DIPOLO A" 
+Solid.Delete "TAG_RFID:DIPOLO B"
+
+'@ move wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.MoveWCS "local", "0.0", "0.0", "-H_diel"
+
+'@ rotate wcs
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.RotateWCS "v", "180"
+
+'@ perform cylindrical bending
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Bending
+    .CylindricalBend "TAG_RFID:DIELETTRICO2", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:LSHUNT", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL2", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL2_1", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL_SX", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL_SX_1", "True", "0", "R_BOTTLE", "-1"
+End With
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL2", "9"
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL2_1", "9"
+
+'@ define discrete port: 1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With DiscretePort 
+     .Reset 
+     .PortNumber "1" 
+     .Type "SParameter" 
+     .Label "CHIP_MONZA4" 
+     .Folder "" 
+     .Impedance "Rch" 
+     .VoltagePortImpedance "0.0" 
+     .Voltage "1.0" 
+     .Current "1.0" 
+     .SetP1 "True", "6501.1522523777", "295", "273.17103020338" 
+     .SetP2 "True", "6501.1522523777", "-295", "273.17103020338" 
+     .InvertDirection "False" 
+     .LocalCoordinates "True" 
+     .Monitor "True" 
+     .Radius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .Create 
+End With
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL2", "11"
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL2_1", "11"
+
+'@ define lumped element: Folder1:capacità
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With LumpedElement
+     .Reset 
+     .SetName "capacità" 
+     .Folder "Folder1" 
+     .SetType "RLCSerial" 
+     .SetR  "0" 
+     .SetL  "0" 
+     .SetC  "Cch" 
+     .SetGs "0" 
+     .SetI0 "1e-14" 
+     .SetT  "300" 
+     .SetP1 "True", "7989.8080617044", "295", "490.55173871232" 
+     .SetP2 "True", "7989.8080617044", "-295", "490.55173871232" 
+     .SetInvert "False" 
+     .SetMonitor "True" 
+     .SetRadius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .CircuitFileName "" 
+     .CircuitId "1" 
+     .UseCopyOnly "True" 
+     .UseRelativePath "False" 
+     .Create
+End With
 

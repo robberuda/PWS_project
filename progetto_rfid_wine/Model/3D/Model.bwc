@@ -1,5 +1,41 @@
-2800 0 0 0           
-20 CST MICROWAVE STUDIO 14 ACIS 28.0.2 NT 24 Sat Jul 25 11:46:40 2020 
+2800 0 6 0           
+20 CST MICROWAVE STUDIO 14 ACIS 28.0.2 NT 24 Tue Jul 28 10:28:17 2020 
 0.001 9.9999999999999995e-07 1e-10 
-T @77 ZZT7SH68YJ_Z2N_CDH882YCZB4VMZCQWGCAMFJNEBB_MR659YD54KJ6X29MBR86FBAPKRP7CY8N4M 
+T @77 452YZYFPRQFQTA8J7NFQA2JCW5PBQ8NEDDUMK27B7C8CPAQ239CVFX657C3MEPP3YCQ3FC5U6DVCR 
+vertex $6 -1 -1 $-1 $-1 $7 #
+vertex $8 -1 -1 $-1 $-1 $9 #
+vertex $10 -1 -1 $-1 $-1 $11 #
+vertex $12 -1 -1 $-1 $-1 $13 #
+vertex $14 -1 -1 $-1 $-1 $15 #
+vertex $16 -1 -1 $-1 $-1 $17 #
+named_attribute-st-attrib $-1 -1 $18 $-1 $0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 nTAG_RFID:DIPOLO A #
+point $-1 -1 -1 $-1 1002.9331346706539 295 39.970334328875559 #
+named_attribute-st-attrib $-1 -1 $19 $-1 $1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 nTAG_RFID:DIPOLO B #
+point $-1 -1 -1 $-1 1002.9331346706539 -295 39.970334328875559 #
+named_attribute-st-attrib $-1 -1 $20 $-1 $2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @16 nTAG_RFID:METAL2 #
+point $-1 -1 -1 $-1 -5505.3817869843188 295 -253.10168747166483 #
+named_attribute-st-attrib $-1 -1 $21 $-1 $3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 nTAG_RFID:METAL2_1 #
+point $-1 -1 -1 $-1 -5505.3817869843188 -295 -253.10168747166483 #
+named_attribute-st-attrib $-1 -1 $22 $-1 $4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @16 nTAG_RFID:METAL2 #
+point $-1 -1 -1 $-1 -6998.0871994084619 295 -440.6677899362578 #
+named_attribute-st-attrib $-1 -1 $23 $-1 $5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 nTAG_RFID:METAL2_1 #
+point $-1 -1 -1 $-1 -6998.0871994084619 -295 -440.6677899362578 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $24 $6 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $25 $8 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $26 $10 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $27 $12 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $28 $14 $4 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $29 $16 $5 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @17 backwd_pickNumber 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $30 $18 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 32 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $31 $19 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 33 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $32 $20 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 58 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $33 $21 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 59 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $34 $22 $4 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 61 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $35 $23 $5 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @18 backwd_blockNumber 62 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $24 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $25 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $26 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $27 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 9 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $28 $4 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 11 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $-1 $29 $5 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @9 backwd_id 11 #
 End-of-ACIS-data 

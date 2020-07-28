@@ -1,5 +1,45 @@
 MWS Result File Version 20150206
-size=i:124
+size=i:148
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:distanza massima tag.rd1
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:gain(incopleto).rd0
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:EIRP.rd0
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:potenza_W.rd0
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:lambda_953MHz_m.rd0
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -176,6 +216,157 @@ creation=s:internal
 lifetime=s:persistent
 result=s:0
 treepath=s:1D Results
+
+type=s:TABLE
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\tau
+files=s:tau.rt1
+files=s:tau.rd1
+title=s:tau
+ylabel=s:tau(f)
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\lambda_953MHz_m
+files=s:lambda_953MHz_m.rt0
+files=s:lambda_953MHz_m.rd0
+title=s:lambda_953MHz_m
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\potenza_W
+files=s:potenza_W.rt0
+files=s:potenza_W.rd0
+title=s:potenza_W
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\EIRP
+files=s:EIRP.rt0
+files=s:EIRP.rd0
+title=s:EIRP
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\gain(incopleto)
+files=s:gain(incopleto).rt0
+files=s:gain(incopleto).rd0
+title=s:gain(incopleto)
+
+type=s:TABLE
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\distanza massima tag
+files=s:distanza massima tag.rt1
+files=s:distanza massima tag.rd1
+title=s:distanza massima tag
+ylabel=s:distanza massima tag
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Lumped Elements\Voltages\Signals\Folder1\capacità [1]
+files=s:usFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Lumped Elements\Currents\Signals\Folder1\capacità [1]
+files=s:isFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Lumped Elements\Voltages\Folder1\capacità [1]
+files=s:ucFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Lumped Elements\Currents\Folder1\capacità [1]
+files=s:icFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Lumped Elements\Impedances\Folder1\capacità [1]
+files=s:zcFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss per Lumped Element\Folder1\Loss in element capacità
+files=s:plFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss in Lumped Elements
+files=s:LumpedElementPower_1.sig
 
 type=s:XYSIGNAL2
 subtype=s:user
@@ -582,19 +773,6 @@ parametric=s:P
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
 
-type=s:TABLE
-subtype=s:complex
-problemclass=s::8:1000
-visibility=s:visible
-creation=s:internal
-lifetime=s:surviveparchange
-result=s:1
-treepath=s:Tables\1D Results\tau
-files=s:tau.rt1
-files=s:tau.rd1
-title=s:tau
-ylabel=s:tau(f)
-
 type=s:XYSIGNAL2
 subtype=s:user
 problemclass=s::8:1000
@@ -684,6 +862,76 @@ lifetime=s:persistent
 result=s:0
 treepath=s:Excitation Signals\default
 files=s:signal_default.sig
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Lumped Elements\Voltages\Signals\Folder1\capacità [1]
+files=s:usFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Lumped Elements\Currents\Signals\Folder1\capacità [1]
+files=s:isFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Lumped Elements\Voltages\Folder1\capacità [1]
+files=s:ucFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Lumped Elements\Currents\Folder1\capacità [1]
+files=s:icFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Lumped Elements\Impedances\Folder1\capacità [1]
+files=s:zcFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss per Lumped Element\Folder1\Loss in element capacità
+files=s:plFolder1[b]capacità(1).sig
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss in Lumped Elements
+files=s:LumpedElementPower_1.sig
 
 type=s:XYSIGNAL2
 subtype=s:user

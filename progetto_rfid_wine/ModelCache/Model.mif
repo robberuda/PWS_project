@@ -4,8 +4,8 @@
 [PCB_IMPORT: False]
 [DISABLE_FAST_LOAD: False]
 [WCS: 0 0 -100 0 0 -1 -1 0 0]
-[BBOX:-98353.622258064512 98353.622258064512 -148353.62225806451 148353.62225806451 -148553.62225806451 48403.622258064555]
-[BBOX_STRUCTURE:-50000 50000 -100000 100000 -100200 50.000000000044452]
+[BBOX:-98353.622258064512 98353.622258064512 -148353.62225806451 148353.62225806451 -148453.62225806451 48403.622258064519]
+[BBOX_STRUCTURE:-50000 50000 -100000 100000 -100100 50.000000000009088]
 [UNITS]
      .Geometry "um" 
      .Frequency "MHz" 
@@ -529,16 +529,36 @@ Solver.FrequencyRange "600", "2500"
      .Transparency "90" 
      .Create
 [ENDMATERIAL]
+[LUMPED: Folder1:capacità]
+     .SetType "RLCSerial" 
+     .SetR  "0" 
+     .SetL  "0" 
+     .SetC  "1.2100000000000001e-12" 
+     .SetGs "0" 
+     .SetI0 "1e-14" 
+     .SetT  "300" 
+     .SetP1 "True", "6998.0871994085", "295", "340.66778993626" 
+     .SetP2 "True", "6998.0871994085", "-295", "340.66778993626" 
+     .SetInvert "False" 
+     .SetMonitor "True" 
+     .SetRadius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .CircuitFileName "" 
+     .CircuitId "1" 
+     .UseCopyOnly "True" 
+     .UseRelativePath "False" 
+[ENDLUMPED]
 [DISCRETEEDGE: 1]
      .Type "SParameter" 
-     .Label "" 
+     .Label "CHIP_MONZA4" 
      .Folder "" 
-     .Impedance "50.0" 
+     .Impedance "1650" 
      .VoltagePortImpedance "0.0" 
      .Voltage "1.0" 
      .Current "1.0" 
-     .SetP1 "False", "0", "250", "-50" 
-     .SetP2 "False", "0", "-250", "-50" 
+     .SetP1 "True", "5505.3817869843188", "295", "153.10168747166483" 
+     .SetP2 "True", "5505.3817869843188", "-295", "153.10168747166483" 
      .InvertDirection "False" 
      .LocalCoordinates "True" 
      .Monitor "True" 

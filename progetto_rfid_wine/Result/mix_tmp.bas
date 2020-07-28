@@ -179,34 +179,34 @@ End Sub
 Function EvaluateExpression(A_cst_tmp As Variant, B_cst_tmp As Variant, C_cst_tmp As Variant, D_cst_tmp As Variant, E_cst_tmp As Variant, F_cst_tmp As Variant) As Variant
 Dim  TmpResult_Final As Object
 ' The following line in this template will be/has been replaced with the VBA command chain
-Dim TmpResult_13 As Object
-Set TmpResult_13 = A_cst_tmp.Copy()
-Re1DC(TmpResult_13)
-Dim NumObject_18_2 As Object
-Set NumObject_18_2 = GetRes1DComplexFrom1DCNumeric(2,0,callingApp)
-NumObject_18_2.MakeCompatibleTo(A_cst_tmp)
+Dim NumObject_16_1 As Object
+Set NumObject_16_1 = GetRes1DComplexFrom1DCNumeric(4,0,callingApp)
+NumObject_16_1.MakeCompatibleTo(B_cst_tmp)
+Dim NumObject_16_2 As Object
+Set NumObject_16_2 = GetRes1DComplexFrom1DCNumeric(3.14159265358979,0,callingApp)
+NumObject_16_2.MakeCompatibleTo(B_cst_tmp)
+Dim TmpResult_16 As Object
+Set TmpResult_16 = NumObject_16_1.Copy()
+TmpResult_16.ComponentMult(NumObject_16_2)
 Dim TmpResult_18 As Object
-Set TmpResult_18 = TmpResult_13.Copy()
-TmpResult_18.ZthPower(NumObject_18_2)
-Dim TmpResult_30 As Object
-Set TmpResult_30 = A_cst_tmp.Copy()
-Im1DC(TmpResult_30)
-Dim NumObject_35_2 As Object
-Set NumObject_35_2 = GetRes1DComplexFrom1DCNumeric(2,0,callingApp)
-NumObject_35_2.MakeCompatibleTo(A_cst_tmp)
-Dim TmpResult_35 As Object
-Set TmpResult_35 = TmpResult_30.Copy()
-TmpResult_35.ZthPower(NumObject_35_2)
-Dim TmpResult_37 As Object
-Set TmpResult_37 = TmpResult_18.Copy()
-TmpResult_37.Add(TmpResult_35)
-Dim NumObject_39_1 As Object
-Set NumObject_39_1 = GetRes1DComplexFrom1DCNumeric(1,0,callingApp)
-NumObject_39_1.MakeCompatibleTo(A_cst_tmp)
-Dim TmpResult_39 As Object
-Set TmpResult_39 = NumObject_39_1.Copy()
-TmpResult_39.Subtract(TmpResult_37)
-Set TmpResult_Final = TmpResult_39
+Set TmpResult_18 = B_cst_tmp.Copy()
+TmpResult_18.ComponentDiv(TmpResult_16)
+Dim TmpResult_40 As Object
+Set TmpResult_40 = A_cst_tmp.Copy()
+TmpResult_40.ComponentMult(E_cst_tmp)
+Dim TmpResult_52 As Object
+Set TmpResult_52 = TmpResult_40.Copy()
+TmpResult_52.ComponentMult(D_cst_tmp)
+Dim TmpResult_64 As Object
+Set TmpResult_64 = TmpResult_52.Copy()
+TmpResult_64.ComponentDiv(C_cst_tmp)
+Dim TmpResult_66 As Object
+Set TmpResult_66 = TmpResult_64.Copy()
+Sqr1DC(TmpResult_66)
+Dim TmpResult_70 As Object
+Set TmpResult_70 = TmpResult_18.Copy()
+TmpResult_70.ComponentMult(TmpResult_66)
+Set TmpResult_Final = TmpResult_70
 
 Set EvaluateExpression = TmpResult_Final
 End Function

@@ -9,11 +9,16 @@ Units settings:
 
 ----------------------------------------------------------------------------------------
 
-Template based postprocessing started at: 11:41 AM Saturday, 25. July 2020
+Template based postprocessing started at: 10:26 AM Tuesday, 28. July 2020
 
   Evaluating 'tau': 0 s
+  Evaluating 'lambda_953MHz_m': 0 s
+  Evaluating 'potenza_W': 0 s
+  Evaluating 'EIRP': 0 s
+  Evaluating 'gain(incopleto)': 0 s
+  Evaluating 'distanza massima tag': 0 s
 
-  Total time: 0 s  ( = 0 h, 0 m, 0 s )
+  Total time: 1 s  ( = 0 h, 0 m, 1 s )
 
-Template based postprocessing finished at: 11:41 AM Saturday, 25. July 2020
+Template based postprocessing finished at: 10:26 AM Tuesday, 28. July 2020
 ----------------------------------------------------------------------------------------

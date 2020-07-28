@@ -1,7 +1,7 @@
 9
 0
 0
-1
+6
 tau
 Mix Template Results
 1
@@ -11,5 +11,55 @@ P
 ED10
 1
 tau
+lambda_953MHz_m
+Mix Template Results
 1
+0D
+General 1D
+P
+ED10
+1
+lambda_953MHz_m
+potenza_W
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+potenza_W
+EIRP
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+EIRP
+gain(incopleto)
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+gain(incopleto)
+distanza massima tag
+Mix Template Results
+1
+1DC
+General 1D
+P
+ED10
+1
+distanza massima tag
+6
 1:Tables\1D Results\tau
+2:Tables\0D Results\lambda_953MHz_m
+3:Tables\0D Results\potenza_W
+4:Tables\0D Results\EIRP
+5:Tables\0D Results\gain(incopleto)
+6:Tables\1D Results\distanza massima tag
