@@ -21,7 +21,7 @@ Processing CAD model (for field results)
 	[Accuracy improvement for long shapes in inhomogeneous mesh regions]
 Version 2019.0 (build 20180920)
 PBA version 2018092019
-2020 Jul 28 (Tue): 10:23:43
+2020 Jul 28 (Tue): 19:46:58
 ========================================================================
 
 ===========================================
@@ -34,36 +34,36 @@ Processing CAD model
 	[Accuracy improvement for long shapes in inhomogeneous mesh regions]
 Version 2019.0 (build 20180920)
 PBA version 2018092019
-2020 Jul 28 (Tue): 10:23:43
+2020 Jul 28 (Tue): 19:46:58
 ========================================================================
 
 ---------------------------------------------
-Used point accuracy enhancement value: 0.00%.
+Used point accuracy enhancement value: 8.00%.
 ---------------------------------------------
 
 =============================================================================
 Mesh statistics:
 -----------------------------------------------------------------------------
-Minimum edge length (x): 746 @ mesh line 36 (x)
-Maximum edge length (x): 6.91e+03 @ mesh line 1 (x)
-Minimum face area (x): 6.68e+05 @ mesh lines 77 | 68 (y | z)
-Maximum face area (x): 5.38e+07 @ mesh lines 1 | 77 (y | z)
-Minimum edge length (y): 590 @ mesh line 77 (y)
-Maximum edge length (y): 6.91e+03 @ mesh line 1 (y)
-Minimum face area (y): 8.44e+05 @ mesh lines 68 | 36 (z | x)
-Maximum face area (y): 5.38e+07 @ mesh lines 77 | 1 (z | x)
-Minimum edge length (z): 1.13e+03 @ mesh line 68 (z)
-Maximum edge length (z): 7.78e+03 @ mesh line 77 (z)
-Minimum face area (z): 4.4e+05 @ mesh lines 36 | 77 (x | y)
-Maximum face area (z): 4.77e+07 @ mesh lines 1 | 1 (x | y)
-Maximum mesh face aspect ratio (x): 13.2 : 1.0  @ mesh lines 77 | 77 (y | z)
-Maximum mesh face aspect ratio (y): 10.4 : 1.0  @ mesh lines 77 | 36 (z | x)
-Maximum mesh face aspect ratio (z): 11.7 : 1.0  @ mesh lines 1 | 77 (x | y)
+Minimum edge length (x): 1e+03 @ mesh line 24 (x)
+Maximum edge length (x): 1.78e+04 @ mesh line 1 (x)
+Minimum face area (x): 7.36e+05 @ mesh lines 45 | 35 (y | z)
+Maximum face area (x): 3.18e+08 @ mesh lines 89 | 0 (y | z)
+Minimum edge length (y): 590 @ mesh line 45 (y)
+Maximum edge length (y): 1.78e+04 @ mesh line 89 (y)
+Minimum face area (y): 1.25e+06 @ mesh lines 35 | 24 (z | x)
+Maximum face area (y): 3.18e+08 @ mesh lines 0 | 1 (z | x)
+Minimum edge length (z): 1.25e+03 @ mesh line 35 (z)
+Maximum edge length (z): 1.78e+04 @ mesh line 0 (z)
+Minimum face area (z): 5.92e+05 @ mesh lines 24 | 45 (x | y)
+Maximum face area (z): 3.18e+08 @ mesh lines 1 | 89 (x | y)
+Maximum mesh face aspect ratio (x): 30.2 : 1.0  @ mesh lines 45 | 0 (y | z)
+Maximum mesh face aspect ratio (y): 17.8 : 1.0  @ mesh lines 0 | 24 (z | x)
+Maximum mesh face aspect ratio (z): 30.2 : 1.0  @ mesh lines 1 | 45 (x | y)
 =============================================================================
 
-============================================================================
-Available resources to store TST cells: 2146434859 (204658.60% of mesh size)
-============================================================================
+=============================================================================
+Available resources to store TST cells: 2147276095 (1034572.59% of mesh size)
+=============================================================================
 
 ==================================================================================================
 == CST Matrix Calculation Priority Log                                                          ==
@@ -71,20 +71,17 @@ Available resources to store TST cells: 2146434859 (204658.60% of mesh size)
  
 Priorities are sorted in ascending order beginning with the lowest priority
  
-Priority:   1, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper, float:   0.00e+00, wire: false, sheet: false, human: false, PEC: false, SI: false, face port:   0, feature ID:      -1
+Priority:   1, shape   3: TAG_RFID:DIELETTRICO, material: adesive_paper, float:   0.00e+00, wire: false, sheet: false, human: false, PEC: false, SI: false, face port:   0, feature ID:      -1
 Priority:   1, shape   2: BOTTIGLIA:WINE, material: WINE, float:   0.00e+00, wire: false, sheet: false, human: false, PEC: false, SI: false, face port:   0, feature ID:      -1
 Priority:   1, shape   1: BOTTIGLIA:VETRO, material: material1, float:   0.00e+00, wire: false, sheet: false, human: false, PEC: false, SI: false, face port:   0, feature ID:      -1
-Priority:   2, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
-Priority:   2, shape   7: TAG_RFID:METAL_SX, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
-Priority:   2, shape   6: TAG_RFID:METAL2_1, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
-Priority:   2, shape   5: TAG_RFID:METAL2, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
-Priority:   3, shape   4: TAG_RFID:LSHUNT, material: Aluminum, float:   0.00e+00, wire: false, sheet:  true, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
+Priority:   2, shape   5: TAG_RFID:METAL1_1, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
+Priority:   2, shape   4: TAG_RFID:METAL1, material: Aluminum, float:   0.00e+00, wire: false, sheet: false, human: false, PEC:  true, SI:  true, face port:   0, feature ID:      -1
  
 ==================================================================================================
  
 ====================================================
 PBA version: default
-Geo accuracy: 0.000000
+Geo accuracy: 8.000000
 PEC background is represented by CAD geometry: false
 Watertightness check: true
 Self intersection check: false
@@ -101,26 +98,26 @@ Finished CAD processing
 ------------------------------------------------------------
 Parallelization Info
 ------------------------------------------------------------
-Number of concurrent threads: 6
-Number of node domains: 12
-Number of mesh fill domains: 45
+Number of concurrent threads: 4
+Number of node domains: 4
+Number of mesh fill domains: 12
 Memory downscale: 1
-CPU load: 100.00%
+CPU load: 66.67%
 Emptiness: 0.00%
-Hex mesh complexity: 1.02
+Hex mesh complexity: 0.20
 Geometric complexity: 0.00
 ------------------------------------------------------------
 Node order
-9, 5, 6, 2, 11, 10, 8, 7, 4, 3, 1, 0
+2, 3, 0, 1
 ------------------------------------------------------------
 
--------------------------------------
-Mesh: # of points excl. TSTs: 1048788
-      # of points incl. TSTs: 1050214
--------------------------------------
+------------------------------------
+Mesh: # of points excl. TSTs: 207552
+      # of points incl. TSTs: 208346
+------------------------------------
 
 1xN000:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102413
+         2020 Jul28 (Tue): 194659
          <<<<<<<<<<<<<<<<<<<<<<<<
 
 1xN000:  ======================================================
@@ -147,11 +144,11 @@ Mesh: # of points excl. TSTs: 1048788
          	[PBA version: default]
          Version 2019.0 (build 20180920)
          PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:13
+         2020 Jul 28 (Tue): 19:46:59
          =======================================
 
 1xN000:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
+         Used point accuracy enhancement value: 8.00%.
          ---------------------------------------------
 
 1xN000:  Shapes are ordered to support shape wise matrix storage
@@ -163,19 +160,16 @@ Mesh: # of points excl. TSTs: 1048788
 
          Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
          Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
+         Priority:   3, shape   3: TAG_RFID:DIELETTRICO, material: adesive_paper
+         Priority:   4, shape   4: TAG_RFID:METAL1, material: Aluminum
+         Priority:   4, shape   5: TAG_RFID:METAL1_1, material: Aluminum
 
          ==================================================================================================
 
 1xN000:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN000:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+1xN000:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
+         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 1xN000:  ssssssssssssssssssssssssssssssssssssssssss
          # of curls with SI accuracy enhancement: 0
@@ -183,12 +177,12 @@ Mesh: # of points excl. TSTs: 1048788
 
 1xN000:  ------------------------------------------------------------------------------
          PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
+         PBA fill limit is applied on faces filled with at least 98.07% metal material.
          --------------------------------------------------------------
          detailed accuracy settings:
          --------------------------------------------------------------
          augmented fill limit:       true
-         augmented fill limit value: 85.00
+         augmented fill limit value: 98.07
          automatic fill limit:       true
          early fill limit:           true
          inverse fill limit:         true
@@ -205,13 +199,13 @@ Mesh: # of points excl. TSTs: 1048788
          =================================
 
 1xN000:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102431
+         2020 Jul28 (Tue): 194710
          >>>>>>>>>>>>>>>>>>>>>>>>
 
 
 
 1xN001:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102412
+         2020 Jul28 (Tue): 194659
          <<<<<<<<<<<<<<<<<<<<<<<<
 
 1xN001:  ======================================================
@@ -238,11 +232,11 @@ Mesh: # of points excl. TSTs: 1048788
          	[PBA version: default]
          Version 2019.0 (build 20180920)
          PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:12
+         2020 Jul 28 (Tue): 19:46:59
          =======================================
 
 1xN001:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
+         Used point accuracy enhancement value: 8.00%.
          ---------------------------------------------
 
 1xN001:  Shapes are ordered to support shape wise matrix storage
@@ -254,19 +248,16 @@ Mesh: # of points excl. TSTs: 1048788
 
          Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
          Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
+         Priority:   3, shape   3: TAG_RFID:DIELETTRICO, material: adesive_paper
+         Priority:   4, shape   4: TAG_RFID:METAL1, material: Aluminum
+         Priority:   4, shape   5: TAG_RFID:METAL1_1, material: Aluminum
 
          ==================================================================================================
 
 1xN001:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN001:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+1xN001:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
+         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 1xN001:  ssssssssssssssssssssssssssssssssssssssssss
          # of curls with SI accuracy enhancement: 0
@@ -274,12 +265,12 @@ Mesh: # of points excl. TSTs: 1048788
 
 1xN001:  ------------------------------------------------------------------------------
          PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
+         PBA fill limit is applied on faces filled with at least 98.07% metal material.
          --------------------------------------------------------------
          detailed accuracy settings:
          --------------------------------------------------------------
          augmented fill limit:       true
-         augmented fill limit value: 85.00
+         augmented fill limit value: 98.07
          automatic fill limit:       true
          early fill limit:           true
          inverse fill limit:         true
@@ -296,13 +287,13 @@ Mesh: # of points excl. TSTs: 1048788
          =================================
 
 1xN001:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102430
+         2020 Jul28 (Tue): 194710
          >>>>>>>>>>>>>>>>>>>>>>>>
 
 
 
 1xN002:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
+         2020 Jul28 (Tue): 194659
          <<<<<<<<<<<<<<<<<<<<<<<<
 
 1xN002:  ======================================================
@@ -329,11 +320,11 @@ Mesh: # of points excl. TSTs: 1048788
          	[PBA version: default]
          Version 2019.0 (build 20180920)
          PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
+         2020 Jul 28 (Tue): 19:46:59
          =======================================
 
 1xN002:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
+         Used point accuracy enhancement value: 8.00%.
          ---------------------------------------------
 
 1xN002:  Shapes are ordered to support shape wise matrix storage
@@ -345,19 +336,16 @@ Mesh: # of points excl. TSTs: 1048788
 
          Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
          Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
+         Priority:   3, shape   3: TAG_RFID:DIELETTRICO, material: adesive_paper
+         Priority:   4, shape   4: TAG_RFID:METAL1, material: Aluminum
+         Priority:   4, shape   5: TAG_RFID:METAL1_1, material: Aluminum
 
          ==================================================================================================
 
 1xN002:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN002:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+1xN002:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
+         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 1xN002:  ssssssssssssssssssssssssssssssssssssssssss
          # of curls with SI accuracy enhancement: 0
@@ -365,12 +353,12 @@ Mesh: # of points excl. TSTs: 1048788
 
 1xN002:  ------------------------------------------------------------------------------
          PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
+         PBA fill limit is applied on faces filled with at least 98.07% metal material.
          --------------------------------------------------------------
          detailed accuracy settings:
          --------------------------------------------------------------
          augmented fill limit:       true
-         augmented fill limit value: 85.00
+         augmented fill limit value: 98.07
          automatic fill limit:       true
          early fill limit:           true
          inverse fill limit:         true
@@ -382,18 +370,31 @@ Mesh: # of points excl. TSTs: 1048788
          accuracy mode:
          ------------------------------------------------------------------------------
 
+1xN002:  discrete edge port "1" is connected to metal material.
+1xN002:  lumped edge element "à" is connected to metal material.
+         The connection has been enforced at both terminals.
+1xN002:  ----------------------------------------------------------------
+         The following discrete edge port is connected to metal material:
+         	1
+         ----------------------------------------------------------------
+
+1xN002:  -----------------------------------------------------------------
+         The following lumped edge element is connected to metal material:
+         	Folder1:capacità
+         -----------------------------------------------------------------
+
 1xN002:  =================================
          Finished matrix computation (PBA)
          =================================
 
 1xN002:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102410
+         2020 Jul28 (Tue): 194711
          >>>>>>>>>>>>>>>>>>>>>>>>
 
 
 
 1xN003:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102411
+         2020 Jul28 (Tue): 194659
          <<<<<<<<<<<<<<<<<<<<<<<<
 
 1xN003:  ======================================================
@@ -420,11 +421,11 @@ Mesh: # of points excl. TSTs: 1048788
          	[PBA version: default]
          Version 2019.0 (build 20180920)
          PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:11
+         2020 Jul 28 (Tue): 19:46:59
          =======================================
 
 1xN003:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
+         Used point accuracy enhancement value: 8.00%.
          ---------------------------------------------
 
 1xN003:  Shapes are ordered to support shape wise matrix storage
@@ -436,19 +437,16 @@ Mesh: # of points excl. TSTs: 1048788
 
          Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
          Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
+         Priority:   3, shape   3: TAG_RFID:DIELETTRICO, material: adesive_paper
+         Priority:   4, shape   4: TAG_RFID:METAL1, material: Aluminum
+         Priority:   4, shape   5: TAG_RFID:METAL1_1, material: Aluminum
 
          ==================================================================================================
 
 1xN003:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN003:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+1xN003:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+         FARM/Meshfill cache is set to 8 (local FI domains: 4, dynamic: false)
+         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 1xN003:  ssssssssssssssssssssssssssssssssssssssssss
          # of curls with SI accuracy enhancement: 0
@@ -456,12 +454,12 @@ Mesh: # of points excl. TSTs: 1048788
 
 1xN003:  ------------------------------------------------------------------------------
          PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
+         PBA fill limit is applied on faces filled with at least 98.07% metal material.
          --------------------------------------------------------------
          detailed accuracy settings:
          --------------------------------------------------------------
          augmented fill limit:       true
-         augmented fill limit value: 85.00
+         augmented fill limit value: 98.07
          automatic fill limit:       true
          early fill limit:           true
          inverse fill limit:         true
@@ -478,746 +476,7 @@ Mesh: # of points excl. TSTs: 1048788
          =================================
 
 1xN003:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102431
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN004:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102410
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN004:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN004:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:10
-         =======================================
-
-1xN004:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN004:  Shapes are ordered to support shape wise matrix storage
-1xN004:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN004:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN004:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN004:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN004:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN004:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN004:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102429
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN005:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN005:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN005:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
-         =======================================
-
-1xN005:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN005:  Shapes are ordered to support shape wise matrix storage
-1xN005:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN005:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN005:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN005:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN005:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN005:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN005:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102411
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN006:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN006:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN006:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
-         =======================================
-
-1xN006:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN006:  Shapes are ordered to support shape wise matrix storage
-1xN006:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN006:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN006:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN006:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN006:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN006:  discrete edge port "1" is connected to metal material.
-1xN006:  lumped edge element "à" is connected to metal material.
-         The connection has been enforced at both terminals.
-1xN006:  ----------------------------------------------------------------
-         The following discrete edge port is connected to metal material:
-         	1
-         ----------------------------------------------------------------
-
-1xN006:  -----------------------------------------------------------------
-         The following lumped edge element is connected to metal material:
-         	Folder1:capacità
-         -----------------------------------------------------------------
-
-1xN006:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN006:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102411
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN007:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102410
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN007:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN007:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:10
-         =======================================
-
-1xN007:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN007:  Shapes are ordered to support shape wise matrix storage
-1xN007:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN007:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN007:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
-         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN007:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN007:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN007:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN007:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102429
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN008:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 1024         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN008:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN008:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:24:09
-         =======================================
-
-1xN008:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN008:  Shapes are ordered to support shape wise matrix storage
-1xN008:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN008:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN008:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
-         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN008:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN008:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN008:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN008:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102429
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN009:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN009:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN009:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
-         =======================================
-
-1xN009:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN009:  Shapes are ordered to support shape wise matrix storage
-1xN009:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN009:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN009:  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 12, dynamic: false)
-         cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN009:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN009:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN009:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN009:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 102412
-         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN010:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN010:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN010:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
-         =======================================
-
-1xN010:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN010:  Shapes are ordered to support shape wise matrix storage
-1xN010:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN010:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN010:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
-         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN010:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN010:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN010:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN010:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 1024         >>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-1xN011:  <<<<<<<<<<<<<<<<<<<<<<<<
-         2020 Jul28 (Tue): 102345
-         <<<<<<<<<<<<<<<<<<<<<<<<
-
-1xN011:  ======================================================
-          - pinning rule in use   : PINNING_RULE_MCALC_SKIP_ALL
-          - desired group         : 0, sockets = 0
-          - num cores available   : 12
-          - num accessible procs  : 12
-          - num logical procs     : 12
-          - affinity (main thread): 111111 111111
-          - sockets               : 0
-          - potential cores       : 0,2,4,6,8,10
-          - affinity              : 111111
-          - active cores          : 0,2,4,6,8,10
-          - hyperthreading        : on
-          - allowed socket ids    : 0
-          - allowed core ids      : 0,2,4,6,8,10
-          - used mask (string)    : 101010 101010
-
-         ======================================================
-
-1xN011:  =======================================
-         Matrix computation (PBA)
-         	[Gaps between metals are preserved]
-         	[PBA version: default]
-         Version 2019.0 (build 20180920)
-         PBA version 2018092019
-         2020 Jul 28 (Tue): 10:23:45
-         =======================================
-
-1xN011:  ---------------------------------------------
-         Used point accuracy enhancement value: 0.00%.
-         ---------------------------------------------
-
-1xN011:  Shapes are ordered to support shape wise matrix storage
-1xN011:  ==================================================================================================
-         == CST Matrix Calculation Priority Log                                                          ==
-         ==================================================================================================
-
-         Priorities are sorted in ascending order beginning with the lowest priority
-
-         Priority:   3, shape   1: BOTTIGLIA:VETRO, material: material1
-         Priority:   3, shape   2: BOTTIGLIA:WINE, material: WINE
-         Priority:   3, shape   3: TAG_RFID:DIELETTRICO2, material: adesive_paper
-         Priority:   4, shape   5: TAG_RFID:METAL2, material: Aluminum
-         Priority:   4, shape   6: TAG_RFID:METAL2_1, material: Aluminum
-         Priority:   4, shape   7: TAG_RFID:METAL_SX, material: Aluminum
-         Priority:   4, shape   8: TAG_RFID:METAL_SX_1, material: Aluminum
-         Priority:   5, shape   4: TAG_RFID:LSHUNT, material: Aluminum
-
-         ==================================================================================================
-
-1xN011:  Gap-Detection activated for FARM-topology. Gaps are resolved, even partially.: gap tolerance value is 0.001 and mesh geometry scale is 1e-06
-1xN011:  ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         FARM/Meshfill cache is set to 8 (local FI domains: 8, dynamic: false)
-         ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-1xN011:  ssssssssssssssssssssssssssssssssssssssssss
-         # of curls with SI accuracy enhancement: 0
-         ssssssssssssssssssssssssssssssssssssssssss
-
-1xN011:  ------------------------------------------------------------------------------
-         PBA fill limit is applied in inverse mode.
-         PBA fill limit is applied on faces filled with at least 85.00% metal material.
-         --------------------------------------------------------------
-         detailed accuracy settings:
-         --------------------------------------------------------------
-         augmented fill limit:       true
-         augmented fill limit value: 85.00
-         automatic fill limit:       true
-         early fill limit:           true
-         inverse fill limit:         true
-         model complexity:           0.00
-         legacy 2015:                false
-         fixed point accuracy:       false
-         minimum point accuracy:     0
-         mesh step inheritance:      false
-         accuracy mode:
-         ------------------------------------------------------------------------------
-
-1xN011:  =================================
-         Finished matrix computation (PBA)
-         =================================
-
-1xN011:  >>>>>>>>>>>>>>>>>>>>>>>>
-         2020 Jul28 (Tue): 1024         >>>>>>>>>>>>>>>>>>>>>>>>
+         2020 Jul28 (Tue): 1947         >>>>>>>>>>>>>>>>>>>>>>>>
 
 
 

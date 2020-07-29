@@ -1,7 +1,7 @@
 9
 0
 0
-6
+8
 tau
 Mix Template Results
 1
@@ -11,15 +11,15 @@ P
 ED10
 1
 tau
-lambda_953MHz_m
+lambda
 Mix Template Results
 1
-0D
+1DC
 General 1D
 P
 ED10
 1
-lambda_953MHz_m
+lambda
 potenza_W
 Mix Template Results
 1
@@ -38,16 +38,25 @@ P
 ED10
 1
 EIRP
-gain(incopleto)
+Gain (IEEE),3D,Max. Value (Solid Angle)
+Farfield Result
+1
+1D
+Farfield and Antenna Properties
+P
+ED10
+1
+Gain (IEEE),3D,Max. Value (Solid Angle)
+gain_linear
 Mix Template Results
 1
-0D
+1D
 General 1D
 P
 ED10
 1
-gain(incopleto)
-distanza massima tag
+gain_linear
+distanza massima [metri]
 Mix Template Results
 1
 1DC
@@ -55,11 +64,23 @@ General 1D
 P
 ED10
 1
-distanza massima tag
-6
+distanza massima [metri]
+omega
+Mix Template Results
+1
+1DC
+General 1D
+P
+ED10
+1
+omega
+9
 1:Tables\1D Results\tau
 2:Tables\0D Results\lambda_953MHz_m
 3:Tables\0D Results\potenza_W
 4:Tables\0D Results\EIRP
 5:Tables\0D Results\gain(incopleto)
-6:Tables\1D Results\distanza massima tag
+6:Tables\1D Results\distanza massima [metri]
+7:Tables\1D Results\omega
+8:Tables\1D Results\lambda
+9:Tables\1D Results\gain_linear

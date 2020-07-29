@@ -3,7 +3,7 @@
 Number of ports: 1
 Portnames: 1
 Modenumbers: 1
-Portlabels: "CHIP_MONZA4"
+Portlabels: "CHIP"
 StaticSources:
 ThermalSources:
 FloquetPortNames:
@@ -16,8 +16,8 @@ TerminalSourceGroups:
 PortSourceGroups:
 FloquetPortSourceGroups:
 Number of frequency-points: 1
-Fmin: 6.000000e+08
-Fmax: 2.500000e+09
+Fmin: 9.200000e+08
+Fmax: 9.800000e+08
 Fscale: 1.000000e+06
 
 
@@ -30,9 +30,9 @@ Portname: 1
 Modenumber: 1
 Modetype: 6
 Zline: 1.650000e+03 0.000000e+00
-Fdev: 1.550000e+09
-Fmin: 6.000000e+08
-Fmax: 2.500000e+09
+Fdev: 9.500000e+08
+Fmin: 9.200000e+08
+Fmax: 9.800000e+08
 PortModeConsState: 0
 *** endmode
 
@@ -61,6 +61,17 @@ mondomain: 1
 mon_fmin: ""
 mon_fmax: ""
 mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (broadband)"
+nmonfrequencies: 0
+monfrequencies: 
+montype: 18
+mondomain: 1
+mon_fmin: "920"
+mon_fmax: "980"
+mon_nfSteps: "21"
 *** endmonitor
 
 *** newmonitor

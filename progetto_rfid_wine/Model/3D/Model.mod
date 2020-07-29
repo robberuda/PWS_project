@@ -3,7 +3,7 @@
 '# length = um
 '# frequency = MHz
 '# time = ns
-'# frequency range: fmin = 600 fmax = 2500
+'# frequency range: fmin = 920 fmax = 980
 '# created = '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 
 
@@ -797,79 +797,50 @@ With Extrude
      .Point "A/2", "LS/2" 
      .LineTo "Aext/2", "LS/2+B" 
      .LineTo "-A/2", "LS/2+B" 
-     .LineTo "-A/2", "LS/2+W" 
-     .LineTo "-A/2-L1", "LS/2+W" 
-     .LineTo "-A/2-L1", "LS/2" 
+     .LineTo "-A/2", "LS/2" 
      .Create 
 End With
 
-'@ define extrude: TAG_RFID:L_SHUNT
+'@ delete shapes
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Delete "TAG_RFID:DIELETTRICO" 
+Solid.Delete "TAG_RFID:DIPOLO A" 
+Solid.Delete "TAG_RFID:DIPOLO B"
+
+'@ define extrude: TAG_RFID:M1
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 With Extrude 
      .Reset 
-     .Name "L_SHUNT" 
+     .Name "M1" 
      .Component "TAG_RFID" 
-     .Material "Aluminum" 
+     .Material "adesive_paper" 
      .Mode "Pointlist" 
-     .Height "TD" 
+     .Height "td" 
      .Twist "0.0" 
      .Taper "0.0" 
      .Origin "0.0", "0.0", "0.0" 
      .Uvector "1.0", "0.0", "0.0" 
      .Vvector "0.0", "1.0", "0.0" 
-     .Point "-A/2-L1", "LS/2" 
-     .LineTo "-A/2-L1", "LS/2+L2" 
-     .LineTo "-A/2-L1-W-L3-W", "LS/2+L2" 
-     .LineTo "-A/2-L1-W-L3-W", "G/2" 
-     .LineTo "-A/2-L1-W-L3", "G/2" 
-     .LineTo "-A/2-L1-W-L3", "LS/2+L2-W" 
-     .LineTo "-A/2-L1-W", "LS/2+L2-W" 
-     .LineTo "-A/2-L1-W", "LS/2" 
+     .Point "-A/2", "L2-W/2" 
+     .LineTo "-A/2", "L2+W/2" 
+     .LineTo "-L1-W/2", "L2+W/2" 
+     .LineTo "-L1-W/2", "G/2" 
+     .LineTo "-L1+W/2", "G/2" 
+     .LineTo "-L1+W/2", "L2-W/2" 
      .Create 
 End With
 
-'@ rename block: TAG_RFID:L_SHUNT to: TAG_RFID:METAL2
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.Rename "TAG_RFID:L_SHUNT", "METAL2"
-
-'@ change material and color: TAG_RFID:METAL_SX to: Aluminum
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.ChangeMaterial "TAG_RFID:METAL_SX", "Aluminum" 
-Solid.SetUseIndividualColor "TAG_RFID:METAL_SX", 1
-Solid.ChangeIndividualColor "TAG_RFID:METAL_SX", "192", "192", "192"
-
-'@ change material and color: TAG_RFID:METAL2 to: Aluminum
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.SetUseIndividualColor "TAG_RFID:METAL2", 1
-Solid.ChangeIndividualColor "TAG_RFID:METAL2", "192", "192", "192"
-
-'@ define brick: TAG_RFID:LSHUNT
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-With Brick
-     .Reset 
-     .Name "LSHUNT" 
-     .Component "TAG_RFID" 
-     .Material "Aluminum" 
-     .Xrange "-A/2-L1-WS", "-A/2-L1" 
-     .Yrange "LS/2", "-LS/2" 
-     .Zrange "0", "TD" 
-     .Create
-End With
-
-'@ transform: mirror TAG_RFID:METAL2
+'@ transform: mirror TAG_RFID:M1
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 With Transform 
      .Reset 
-     .Name "TAG_RFID:METAL2" 
+     .Name "TAG_RFID:M1" 
      .Origin "Free" 
      .Center "0", "0", "0" 
-     .PlaneNormal "0", "1", "0" 
+     .PlaneNormal "0", "-1", "0" 
      .MultipleObjects "True" 
      .GroupObjects "False" 
      .Repetitions "1" 
@@ -887,7 +858,7 @@ With Transform
      .Name "TAG_RFID:METAL_SX" 
      .Origin "Free" 
      .Center "0", "0", "0" 
-     .PlaneNormal "0", "1", "0" 
+     .PlaneNormal "0", "-1", "0" 
      .MultipleObjects "True" 
      .GroupObjects "False" 
      .Repetitions "1" 
@@ -897,23 +868,10 @@ With Transform
      .Transform "Shape", "Mirror" 
 End With
 
-'@ change material and color: TAG_RFID:LSHUNT to: Aluminum
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.SetUseIndividualColor "TAG_RFID:LSHUNT", 1
-Solid.ChangeIndividualColor "TAG_RFID:LSHUNT", "192", "192", "192"
-
-'@ delete shapes
-
-'[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solid.Delete "TAG_RFID:DIELETTRICO" 
-Solid.Delete "TAG_RFID:DIPOLO A" 
-Solid.Delete "TAG_RFID:DIPOLO B"
-
 '@ move wcs
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-WCS.MoveWCS "local", "0.0", "0.0", "-H_diel"
+WCS.MoveWCS "local", "0.0", "0.0", "-H_DIEL"
 
 '@ rotate wcs
 
@@ -925,9 +883,8 @@ WCS.RotateWCS "v", "180"
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
 With Bending
     .CylindricalBend "TAG_RFID:DIELETTRICO2", "True", "0", "R_BOTTLE", "-1"
-    .CylindricalBend "TAG_RFID:LSHUNT", "True", "0", "R_BOTTLE", "-1"
-    .CylindricalBend "TAG_RFID:METAL2", "True", "0", "R_BOTTLE", "-1"
-    .CylindricalBend "TAG_RFID:METAL2_1", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:M1", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:M1_1", "True", "0", "R_BOTTLE", "-1"
     .CylindricalBend "TAG_RFID:METAL_SX", "True", "0", "R_BOTTLE", "-1"
     .CylindricalBend "TAG_RFID:METAL_SX_1", "True", "0", "R_BOTTLE", "-1"
 End With
@@ -935,12 +892,12 @@ End With
 '@ pick end point
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Pick.PickEndpointFromId "TAG_RFID:METAL2", "9"
+Pick.PickEndpointFromId "TAG_RFID:M1", "7"
 
 '@ pick end point
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Pick.PickEndpointFromId "TAG_RFID:METAL2_1", "9"
+Pick.PickEndpointFromId "TAG_RFID:M1_1", "7"
 
 '@ define discrete port: 1
 
@@ -949,14 +906,14 @@ With DiscretePort
      .Reset 
      .PortNumber "1" 
      .Type "SParameter" 
-     .Label "CHIP_MONZA4" 
+     .Label "" 
      .Folder "" 
      .Impedance "Rch" 
      .VoltagePortImpedance "0.0" 
      .Voltage "1.0" 
      .Current "1.0" 
-     .SetP1 "True", "6501.1522523777", "295", "273.17103020338" 
-     .SetP2 "True", "6501.1522523777", "-295", "273.17103020338" 
+     .SetP1 "True", "4757.087007023", "295", "76.131728324455" 
+     .SetP2 "True", "4757.087007023", "-295", "76.131728324455" 
      .InvertDirection "False" 
      .LocalCoordinates "True" 
      .Monitor "True" 
@@ -969,12 +926,12 @@ End With
 '@ pick end point
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Pick.PickEndpointFromId "TAG_RFID:METAL2", "11"
+Pick.PickEndpointFromId "TAG_RFID:M1", "5"
 
 '@ pick end point
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Pick.PickEndpointFromId "TAG_RFID:METAL2_1", "11"
+Pick.PickEndpointFromId "TAG_RFID:M1_1", "5"
 
 '@ define lumped element: Folder1:capacità
 
@@ -990,8 +947,8 @@ With LumpedElement
      .SetGs "0" 
      .SetI0 "1e-14" 
      .SetT  "300" 
-     .SetP1 "True", "7989.8080617044", "295", "490.55173871232" 
-     .SetP2 "True", "7989.8080617044", "-295", "490.55173871232" 
+     .SetP1 "True", "3257.4550775643", "295", "-44.095420115747" 
+     .SetP2 "True", "3257.4550775643", "-295", "-44.095420115747" 
      .SetInvert "False" 
      .SetMonitor "True" 
      .SetRadius "0.0" 
@@ -1003,4 +960,463 @@ With LumpedElement
      .UseRelativePath "False" 
      .Create
 End With
+
+'@ boolean add shapes: TAG_RFID:M1, TAG_RFID:M1_1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Add "TAG_RFID:M1", "TAG_RFID:M1_1"
+
+'@ boolean add shapes: TAG_RFID:METAL_SX, TAG_RFID:METAL_SX_1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Add "TAG_RFID:METAL_SX", "TAG_RFID:METAL_SX_1"
+
+'@ boolean add shapes: TAG_RFID:M1, TAG_RFID:METAL_SX
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Add "TAG_RFID:M1", "TAG_RFID:METAL_SX"
+
+'@ activate global coordinates
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ delete component: TAG_RFID
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Component.Delete "TAG_RFID"
+
+'@ delete port: port1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Port.Delete "1"
+
+'@ delete lumped element: Folder1:capacità
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+LumpedElement.Delete "Folder1:capacità"
+
+'@ new component: TAG_RFID
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Component.New "TAG_RFID"
+
+'@ define brick: TAG_RFID:DIELETTRICO
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Brick
+     .Reset 
+     .Name "DIELETTRICO" 
+     .Component "TAG_RFID" 
+     .Material "adesive_paper" 
+     .Xrange "-A_DIEL/2", "A_DIEL/2" 
+     .Yrange "-B_DIEL/2", "B_DIEL/2" 
+     .Zrange "-H_DIEL", "0" 
+     .Create
+End With
+
+'@ define extrude: TAG_RFID:solid1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Extrude 
+     .Reset 
+     .Name "solid1" 
+     .Component "TAG_RFID" 
+     .Material "adesive_paper" 
+     .Mode "Pointlist" 
+     .Height "TD" 
+     .Twist "0.0" 
+     .Taper "0.0" 
+     .Origin "0.0", "0.0", "0.0" 
+     .Uvector "1.0", "0.0", "0.0" 
+     .Vvector "0.0", "1.0", "0.0" 
+     .Point "A/2", "LS/2" 
+     .LineTo "A/2", "LS/2+B" 
+     .LineTo "-A/2", "LS/2+B" 
+     .LineTo "-A/2", "L2+W/2" 
+     .LineTo "-L1-W/2", "L2+W/2" 
+     .LineTo "-L1-W/2", "G/2" 
+     .LineTo "-L1+W/2", "G/2" 
+     .LineTo "-L1+W/2", "L2-W/2" 
+     .LineTo "-A/2", "L2-W/2" 
+     .LineTo "-a/2", "LS/2" 
+     .Create 
+End With
+
+'@ change material and color: TAG_RFID:solid1 to: Aluminum
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.ChangeMaterial "TAG_RFID:solid1", "Aluminum" 
+Solid.SetUseIndividualColor "TAG_RFID:solid1", 1
+Solid.ChangeIndividualColor "TAG_RFID:solid1", "128", "128", "128"
+
+'@ rename block: TAG_RFID:solid1 to: TAG_RFID:METAL1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solid.Rename "TAG_RFID:solid1", "METAL1"
+
+'@ transform: mirror TAG_RFID:METAL1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Transform 
+     .Reset 
+     .Name "TAG_RFID:METAL1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "-1", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ activate local coordinates
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ perform cylindrical bending
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Bending
+    .CylindricalBend "TAG_RFID:DIELETTRICO", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL1", "True", "0", "R_BOTTLE", "-1"
+    .CylindricalBend "TAG_RFID:METAL1_1", "True", "0", "R_BOTTLE", "-1"
+End With
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL1", "9"
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL1_1", "9"
+
+'@ define discrete port: 1
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With DiscretePort 
+     .Reset 
+     .PortNumber "1" 
+     .Type "SParameter" 
+     .Label "CHIP" 
+     .Folder "" 
+     .Impedance "Rch" 
+     .VoltagePortImpedance "0.0" 
+     .Voltage "1.0" 
+     .Current "1.0" 
+     .SetP1 "True", "3407.5724800895", "295", "-34.097871281105" 
+     .SetP2 "True", "3407.5724800895", "-295", "-34.097871281105" 
+     .InvertDirection "False" 
+     .LocalCoordinates "True" 
+     .Monitor "True" 
+     .Radius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .Create 
+End With
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL1", "11"
+
+'@ pick end point
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Pick.PickEndpointFromId "TAG_RFID:METAL1_1", "11"
+
+'@ define lumped element: Folder1:capacità
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With LumpedElement
+     .Reset 
+     .SetName "capacità" 
+     .Folder "Folder1" 
+     .SetType "RLCSerial" 
+     .SetR  "0" 
+     .SetL  "0" 
+     .SetC  "Cch" 
+     .SetGs "0" 
+     .SetI0 "1e-14" 
+     .SetT  "300" 
+     .SetP1 "True", "4607.2942199899", "295", "62.08514594899" 
+     .SetP2 "True", "4607.2942199899", "-295", "62.08514594899" 
+     .SetInvert "False" 
+     .SetMonitor "True" 
+     .SetRadius "0.0" 
+     .Wire "" 
+     .Position "end1" 
+     .CircuitFileName "" 
+     .CircuitId "1" 
+     .UseCopyOnly "True" 
+     .UseRelativePath "False" 
+     .Create
+End With
+
+'@ activate global coordinates
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ define frequency range
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solver.FrequencyRange "800", "1200"
+
+'@ define farfield monitor: farfield (broadband)
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With Monitor 
+     .Reset 
+     .Name "farfield (broadband)" 
+     .Domain "Time" 
+     .Accuracy "1e-3" 
+     .Samples "21" 
+     .FieldType "Farfield" 
+     .TransientFarfield "False" 
+     .ExportFarfieldSource "False" 
+     .Create 
+End With
+
+'@ define frequency range
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solver.FrequencyRange "900", "1000"
+
+'@ farfield plot options
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With FarfieldPlot 
+     .Plottype "3D" 
+     .Vary "angle1" 
+     .Theta "90" 
+     .Phi "90" 
+     .Step "5" 
+     .Step2 "5" 
+     .SetLockSteps "True" 
+     .SetPlotRangeOnly "False" 
+     .SetThetaStart "0" 
+     .SetThetaEnd "180" 
+     .SetPhiStart "0" 
+     .SetPhiEnd "360" 
+     .SetTheta360 "False" 
+     .SymmetricRange "False" 
+     .SetTimeDomainFF "False" 
+     .SetFrequency "953" 
+     .SetTime "0" 
+     .SetColorByValue "True" 
+     .DrawStepLines "False" 
+     .DrawIsoLongitudeLatitudeLines "False" 
+     .ShowStructure "False" 
+     .ShowStructureProfile "False" 
+     .SetStructureTransparent "False" 
+     .SetFarfieldTransparent "False" 
+     .SetSpecials "enablepolarextralines" 
+     .SetPlotMode "Directivity" 
+     .Distance "1" 
+     .UseFarfieldApproximation "True" 
+     .SetScaleLinear "False" 
+     .SetLogRange "40" 
+     .SetLogNorm "0" 
+     .DBUnit "0" 
+     .SetMaxReferenceMode "abs" 
+     .EnableFixPlotMaximum "False" 
+     .SetFixPlotMaximumValue "1" 
+     .SetInverseAxialRatio "False" 
+     .SetAxesType "user" 
+     .SetAntennaType "unknown" 
+     .Phistart "1.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .Thetastart "0.000000e+00", "0.000000e+00", "1.000000e+00" 
+     .PolarizationVector "0.000000e+00", "1.000000e+00", "0.000000e+00" 
+     .SetCoordinateSystemType "spherical" 
+     .SetAutomaticCoordinateSystem "True" 
+     .SetPolarizationType "Linear" 
+     .SlantAngle 0.000000e+00 
+     .Origin "bbox" 
+     .Userorigin "0.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .SetUserDecouplingPlane "False" 
+     .UseDecouplingPlane "False" 
+     .DecouplingPlaneAxis "X" 
+     .DecouplingPlanePosition "0.000000e+00" 
+     .LossyGround "False" 
+     .GroundEpsilon "1" 
+     .GroundKappa "0" 
+     .EnablePhaseCenterCalculation "False" 
+     .SetPhaseCenterAngularLimit "3.000000e+01" 
+     .SetPhaseCenterComponent "boresight" 
+     .SetPhaseCenterPlane "both" 
+     .ShowPhaseCenter "True" 
+     .ClearCuts 
+     .AddCut "lateral", "0", "1"  
+     .AddCut "lateral", "90", "1"  
+     .AddCut "polar", "90", "1"  
+     .StoreSettings
+End With
+
+'@ define frequency range
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Solver.FrequencyRange "920", "980" 
+
+'@ farfield plot options
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With FarfieldPlot 
+     .Plottype "3D" 
+     .Vary "angle1" 
+     .Theta "90" 
+     .Phi "90" 
+     .Step "5" 
+     .Step2 "5" 
+     .SetLockSteps "True" 
+     .SetPlotRangeOnly "False" 
+     .SetThetaStart "0" 
+     .SetThetaEnd "180" 
+     .SetPhiStart "0" 
+     .SetPhiEnd "360" 
+     .SetTheta360 "False" 
+     .SymmetricRange "False" 
+     .SetTimeDomainFF "False" 
+     .SetFrequency "953" 
+     .SetTime "0" 
+     .SetColorByValue "True" 
+     .DrawStepLines "False" 
+     .DrawIsoLongitudeLatitudeLines "False" 
+     .ShowStructure "False" 
+     .ShowStructureProfile "False" 
+     .SetStructureTransparent "False" 
+     .SetFarfieldTransparent "False" 
+     .SetSpecials "enablepolarextralines" 
+     .SetPlotMode "Directivity" 
+     .Distance "1" 
+     .UseFarfieldApproximation "True" 
+     .SetScaleLinear "False" 
+     .SetLogRange "40" 
+     .SetLogNorm "0" 
+     .DBUnit "0" 
+     .SetMaxReferenceMode "abs" 
+     .EnableFixPlotMaximum "False" 
+     .SetFixPlotMaximumValue "1" 
+     .SetInverseAxialRatio "False" 
+     .SetAxesType "user" 
+     .SetAntennaType "isotropic_linear" 
+     .Phistart "1.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .Thetastart "0.000000e+00", "0.000000e+00", "1.000000e+00" 
+     .PolarizationVector "0.000000e+00", "1.000000e+00", "0.000000e+00" 
+     .SetCoordinateSystemType "ludwig2ae" 
+     .SetAutomaticCoordinateSystem "True" 
+     .SetPolarizationType "Slant" 
+     .SlantAngle 0.000000e+00 
+     .Origin "bbox" 
+     .Userorigin "0.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .SetUserDecouplingPlane "False" 
+     .UseDecouplingPlane "False" 
+     .DecouplingPlaneAxis "X" 
+     .DecouplingPlanePosition "0.000000e+00" 
+     .LossyGround "False" 
+     .GroundEpsilon "1" 
+     .GroundKappa "0" 
+     .EnablePhaseCenterCalculation "False" 
+     .SetPhaseCenterAngularLimit "3.000000e+01" 
+     .SetPhaseCenterComponent "boresight" 
+     .SetPhaseCenterPlane "both" 
+     .ShowPhaseCenter "True" 
+     .ClearCuts 
+     .AddCut "lateral", "0", "1"  
+     .AddCut "lateral", "90", "1"  
+     .AddCut "polar", "90", "1"  
+
+     .StoreSettings
+End With 
+
+
+'@ switch working plane
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Plot.DrawWorkplane "false" 
+
+
+'@ farfield plot options
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With FarfieldPlot 
+     .Plottype "Polar" 
+     .Vary "angle1" 
+     .Theta "90" 
+     .Phi "90" 
+     .Step "1" 
+     .Step2 "1" 
+     .SetLockSteps "True" 
+     .SetPlotRangeOnly "False" 
+     .SetThetaStart "0" 
+     .SetThetaEnd "180" 
+     .SetPhiStart "0" 
+     .SetPhiEnd "360" 
+     .SetTheta360 "False" 
+     .SymmetricRange "False" 
+     .SetTimeDomainFF "False" 
+     .SetFrequency "953" 
+     .SetTime "0" 
+     .SetColorByValue "True" 
+     .DrawStepLines "False" 
+     .DrawIsoLongitudeLatitudeLines "False" 
+     .ShowStructure "False" 
+     .ShowStructureProfile "False" 
+     .SetStructureTransparent "False" 
+     .SetFarfieldTransparent "False" 
+     .SetSpecials "enablepolarextralines" 
+     .SetPlotMode "Directivity" 
+     .Distance "1" 
+     .UseFarfieldApproximation "True" 
+     .SetScaleLinear "False" 
+     .SetLogRange "40" 
+     .SetLogNorm "0" 
+     .DBUnit "0" 
+     .SetMaxReferenceMode "abs" 
+     .EnableFixPlotMaximum "False" 
+     .SetFixPlotMaximumValue "1" 
+     .SetInverseAxialRatio "False" 
+     .SetAxesType "user" 
+     .SetAntennaType "directional_linear" 
+     .Phistart "1.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .Thetastart "0.000000e+00", "0.000000e+00", "1.000000e+00" 
+     .PolarizationVector "0.000000e+00", "1.000000e+00", "0.000000e+00" 
+     .SetCoordinateSystemType "ludwig3" 
+     .SetAutomaticCoordinateSystem "True" 
+     .SetPolarizationType "Slant" 
+     .SlantAngle 0.000000e+00 
+     .Origin "bbox" 
+     .Userorigin "0.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .SetUserDecouplingPlane "False" 
+     .UseDecouplingPlane "False" 
+     .DecouplingPlaneAxis "X" 
+     .DecouplingPlanePosition "0.000000e+00" 
+     .LossyGround "False" 
+     .GroundEpsilon "1" 
+     .GroundKappa "0" 
+     .EnablePhaseCenterCalculation "False" 
+     .SetPhaseCenterAngularLimit "3.000000e+01" 
+     .SetPhaseCenterComponent "boresight" 
+     .SetPhaseCenterPlane "both" 
+     .ShowPhaseCenter "True" 
+     .ClearCuts 
+     .AddCut "lateral", "0", "1"  
+     .AddCut "lateral", "90", "1"  
+     .AddCut "polar", "90", "1"  
+
+     .StoreSettings
+End With 
+
+
+'@ switch working plane
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+Plot.DrawWorkplane "false" 
+
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CSTAuxiliaryGeometry creator="modeler" version="20170928">
   <Objects>
-    <Object name="Lumped Elements\Folder1:capacità" id="9">
-      <FatArrow dimension="10 10 10" direction="0 -590 0" material="$WireMaterial$" position="-6998.087402344 0 -440.6677856445" short="capacità" text="Folder1:capacità"/>
-      <LineSet material="$WireMaterial$" points="-6998.087402344 295 -440.6677856445 -6998.087402344 -295 -440.6677856445" stripped="1"/>
+    <Object name="Lumped Elements\Folder1:capacità" id="6">
+      <FatArrow dimension="10 10 10" direction="0 -590 0" material="$WireMaterial$" position="-5605.064453125 0 -264.2121276855" short="capacità" text="Folder1:capacità"/>
+      <LineSet material="$WireMaterial$" points="-5605.064453125 295 -264.2121276855 -5605.064453125 -295 -264.2121276855" stripped="1"/>
     </Object>
-    <Object name="Ports\port1 (CHIP_MONZA4)" id="10">
-      <Cone dimension="10 10 10" direction="0 -590 0" material="$PortMaterial$" position="-5505.381835938 0 -253.1016845703" short="1" text="1: CHIP_MONZA4"/>
-      <LineSet material="$WireMaterial$" points="-5505.381835938 295 -253.1016845703 -5505.381835938 -295 -253.1016845703" stripped="1"/>
+    <Object name="Ports\port1 (CHIP)" id="7">
+      <Cone dimension="10 10 10" direction="0 -590 0" material="$PortMaterial$" position="-4407.506347656 0 -144.0555267334" short="1" text="1: CHIP"/>
+      <LineSet material="$WireMaterial$" points="-4407.506347656 295 -144.0555267334 -4407.506347656 -295 -144.0555267334" stripped="1"/>
     </Object>
   </Objects>
   <Materials/>

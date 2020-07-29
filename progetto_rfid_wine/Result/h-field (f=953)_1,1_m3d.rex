@@ -13,7 +13,7 @@
     </Frame>
   </ResultGroups>
   <ResultDataType complex="1" timedomain="0" vector="1"/>
-  <SimulationDomain min="-98353.625 -148353.625 -148453.625" max="98353.625 148353.625 48403.62109375"/>
+  <SimulationDomain min="-128892.75 -178892.75 -178992.75" max="128892.75 178892.75 78942.75"/>
   <PlotSettings Clipping="Possible" Plot="4" ignore_symmetry="0" deformation="0"/>
   <Source type="SOLVER"/>
 </MetaResultFile>

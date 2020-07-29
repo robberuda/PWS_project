@@ -3,9 +3,8 @@
 [PCB_BODIES: False]
 [PCB_IMPORT: False]
 [DISABLE_FAST_LOAD: False]
-[WCS: 0 0 -100 0 0 -1 -1 0 0]
-[BBOX:-98353.622258064512 98353.622258064512 -148353.62225806451 148353.62225806451 -148453.62225806451 48403.622258064519]
-[BBOX_STRUCTURE:-50000 50000 -100000 100000 -100100 50.000000000009088]
+[BBOX:-128892.75210526316 128892.75210526316 -178892.75210526318 178892.75210526318 -178992.75210526318 78942.752105263149]
+[BBOX_STRUCTURE:-50000 50000 -100000 100000 -100100 49.999999999988994]
 [UNITS]
      .Geometry "um" 
      .Frequency "MHz" 
@@ -20,7 +19,7 @@
      .SetResultUnit "frequency", "frequency", "" 
 [ENDUNITS]
 [FREQUENCYRANGE]
-Solver.FrequencyRange "600", "2500" 
+Solver.FrequencyRange "920", "980" 
 [ENDFREQUENCYRANGE]
 [BACKGROUND]
      .XminSpace "0.0" 
@@ -537,8 +536,8 @@ Solver.FrequencyRange "600", "2500"
      .SetGs "0" 
      .SetI0 "1e-14" 
      .SetT  "300" 
-     .SetP1 "True", "6998.0871994085", "295", "340.66778993626" 
-     .SetP2 "True", "6998.0871994085", "-295", "340.66778993626" 
+     .SetP1 "True", "-5605.0645063869", "295", "-264.21213746851" 
+     .SetP2 "True", "-5605.0645063869", "-295", "-264.21213746851" 
      .SetInvert "False" 
      .SetMonitor "True" 
      .SetRadius "0.0" 
@@ -551,14 +550,14 @@ Solver.FrequencyRange "600", "2500"
 [ENDLUMPED]
 [DISCRETEEDGE: 1]
      .Type "SParameter" 
-     .Label "CHIP_MONZA4" 
+     .Label "CHIP" 
      .Folder "" 
      .Impedance "1650" 
      .VoltagePortImpedance "0.0" 
      .Voltage "1.0" 
      .Current "1.0" 
-     .SetP1 "True", "5505.3817869843188", "295", "153.10168747166483" 
-     .SetP2 "True", "5505.3817869843188", "-295", "153.10168747166483" 
+     .SetP1 "True", "-4407.5062349396976", "295", "-144.05552099962699" 
+     .SetP2 "True", "-4407.5062349396976", "-295", "-144.05552099962699" 
      .InvertDirection "False" 
      .LocalCoordinates "True" 
      .Monitor "True" 

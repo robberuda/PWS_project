@@ -1,16 +1,53 @@
-28/Jul/2020 10:23:42  Defined reference frequency for open boundary condition (1550 MHz) is larger
+28/Jul/2020 19:46:57  Defined reference frequency for open boundary condition (950 MHz) is larger
                       than the lowest relevant system frequency (monitor at 868.6 MHz).
                       Please check open boundary settings to ensure accurate monitor results for the
                       lowest frequency of interest.
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:23:42  The following farfield monitor(s) have been adjusted to model box [-56907.7,
-                      56907.7, -106908, 106908, -107008, 1074.85].
-                        farfield (f=868.6), farfield (f=915), farfield (f=953), farfield (f=954.2)
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor h-field (f=915) is outside simulation frequency range and will be
+                      ignored.
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:23:42  
-                      Solver started at: 10:23 AM Tuesday, 28. July 2020 (ora legale Europa occidentale)
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor e-field (f=915) is outside simulation frequency range and will be
+                      ignored.
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor h-field (f=868.6) is outside simulation frequency range and will be
+                      ignored.
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor e-field (f=868.6) is outside simulation frequency range and will be
+                      ignored.
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor farfield (f=868.6) is outside the simulation frequency range and
+                      will be ignored.
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  *** Warning ***
+                      
+                      The monitor farfield (f=915) is outside the simulation frequency range and will
+                      be ignored.
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  The following farfield monitor(s) have been adjusted to model box [-59354.9,
+                      59354.9, -109355, 109355, -109458, 1500.32].
+                        farfield (f=868.6), farfield (f=915), farfield (broadband), farfield (f=953),
+                      farfield (f=954.2)
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:46:57  
+                      Solver started at: 07:46 PM Tuesday, 28. July 2020 (ora legale Europa occidentale)
                       
                         Module:  Time Domain: S-Parameter (Win 64)
                         Version: 2019.0 Release from 2018-09-20 (change 633648)
@@ -19,7 +56,7 @@
                       ------------------------------------------------------------------------------
 
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:23:42  ======================================================================
+28/Jul/2020 19:46:57  ======================================================================
                        Solver cycle: 1
                       ======================================================================
                       
@@ -28,90 +65,110 @@
                       
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:23:42  Units settings: 
+28/Jul/2020 19:46:57  Units settings: 
                       
                         Dimensions: um
                         Frequency:  MHz
                         Time:       ns
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:42  The following discrete edge port is connected to metal material:
+28/Jul/2020 19:47:15  The following discrete edge port is connected to metal material:
                       	1
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:42  The following lumped edge element is connected to metal material:
+28/Jul/2020 19:47:15  The following lumped edge element is connected to metal material:
                       	Folder1:capacità
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:45  Mesh statistics:
+28/Jul/2020 19:47:16  Mesh statistics:
                       
                          Hexahedral mesh type: PBA [Version: default]
                       
                          Parallelization type: domain decomposition
-                            Number of parallel working threads: 6
-                            Number of calculation domains used: 12
+                            Number of parallel working threads: 4
+                            Number of calculation domains used: 4
                       
-                         Used point accuracy enhancement value: 0.00%.
-                         PBA fill limit: 85.00% (inverse)
-28/Jul/2020 10:23:45     current system memory usage reached 55%
-28/Jul/2020 10:23:46     current system memory usage reached 55%
+                         Used point accuracy enhancement value: 8.00%.
+28/Jul/2020 19:46:59     current system memory usage reached 65%
+                         PBA fill limit: 98.07% (inverse)
+28/Jul/2020 19:47:00     current system memory usage reached 65%
 
-28/Jul/2020 10:24:49  Boundary conditions: 
+28/Jul/2020 19:47:17  *** Warning ***
+                      
+28/Jul/2020 19:47:17  The current settings will probably lead to a very long simulation time.
+                      
+                      You may improve the simulation speed by:
+                      
+                      1. checking the frequency range and units settings
+                      2. reducing the maximum solver duration
+                      3. checking the mesh to avoid very small mesh steps
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:47:18  Boundary conditions: 
                       
                         YZsymmetry: none
                         XZsymmetry: none
                         XYsymmetry: none
                       
-                        Xmin: expanded open, 4 Layer, depth 27630.6 um
-                        Xmax: expanded open, 4 Layer, depth 27630.6 um
+                        Xmin: expanded open, 4 Layer, depth 71283 um
+                        Xmax: expanded open, 4 Layer, depth 71283 um
                       
-                        Ymin: expanded open, 4 Layer, depth 27630.6 um
-                        Ymax: expanded open, 4 Layer, depth 27630.6 um
+                        Ymin: expanded open, 4 Layer, depth 71285.6 um
+                        Ymax: expanded open, 4 Layer, depth 71285.6 um
                       
-                        Zmin: expanded open, 4 Layer, depth 27630.6 um
-                        Zmax: expanded open, 4 Layer, depth 31127.3 um
+                        Zmin: expanded open, 4 Layer, depth 71322.4 um
+                        Zmax: expanded open, 4 Layer, depth 66266.8 um
                       
                         PML-Type: Convolution PML
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:49  Frequency settings: 
+28/Jul/2020 19:47:18  Frequency settings: 
                       
-                        Fmin:         600
-                        Fmax:         2500
+                        Fmin:         920
+                        Fmax:         980
                         Nfsteps(lin): 1001
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:49  Port: 1
+28/Jul/2020 19:47:18  Port: 1
                       
-28/Jul/2020 10:24:49    Discrete element, reference impedance = 1650 Ohm
+28/Jul/2020 19:47:18    Discrete element, reference impedance = 1650 Ohm
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:24:49  Field update statistics:
+28/Jul/2020 19:47:18  Field update statistics:
                       
-                        Number of components in total: 	6196840
-                        Number of TST elements:		2492
-                        Number of lossy metal components:	928
+                        Number of components in total: 	1212908
+                        Number of TST elements:		1421
+                        Number of lossy metal components:	504
                       
                       Subcycling state:      Automatically deactivated
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  
+28/Jul/2020 19:47:18  Broadband farfield monitor expansion origin: 
+                         x: 0
+                         y: 0
+                         z: -50025
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:47:18  Broadband farfield monitor: Using order 8. (80 farfield modes.)
+                      
+                      ------------------------------------------------------------------------------
+28/Jul/2020 19:52:30  
                       --------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  Steady state energy criterion met, solver finished successfully.
+28/Jul/2020 19:52:30  Steady state energy criterion met, solver finished successfully.
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  Frequency domain results normalized to default signal.
+28/Jul/2020 19:52:30  Frequency domain results normalized to default signal.
                       
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  
+28/Jul/2020 19:52:30  
                         ----------------------------------------------------------------------------
                                             Peak memory used (kB)         Free physical memory (kB) 
                                                                           At begin     Minimum      
                         ----------------------------------------------------------------------------
-                        CAD preparation     22120                         8028404      8028404      
-                        Matrices calc.      808593                        7999023      7176757      
-                        Solver run total    546288                        8054248      7176720      
+                        CAD preparation     22200                         6303856      6303856      
+                        Matrices calc.      420898                        6202148      5922851      
+                        Solver run total    173708                        6330860      5933760      
                         ----------------------------------------------------------------------------
                       
                       --------------------------------------------------------------------------------
@@ -123,39 +180,40 @@
                            Number of CPU threads:               6
                            Hardware info:                  	Hardware Accelerator Device not activated
                       
-                        Number of mesh cells:             	1016800
-                        Excitation duration:              	3.74163026e+000 ns 
-                        Calculation time for excitation:  	28 	s
-                        Number of calculated pulse widths:	3.59804 
+                        Number of mesh cells:             	196742
+                        Excitation duration:              	1.18484958e+002 ns 
+                        Calculation time for excitation:  	308 	s
+                        Number of calculated pulse widths:	1.00117 
                         Steady state accuracy limit:      	-40	dB 
-                        Simulated number of time steps:   	7373 
-                        Maximum number of time steps:     	40983 
+                        Simulated number of time steps:   	94150 
+                        Maximum number of time steps:     	1880791 
                         Time step width:
-                           without subcycles:             	1.82592533e-003 ns
-                           used:                          	1.82592533e-003 ns
+                           without subcycles:             	1.25994759e-003 ns
+                           used:                          	1.25994759e-003 ns
                       
                         CAD preparation time:             	0      	s
-                        Matrix calculation time:          	63 	s
-                        Solver setup time:                	4 	s
-                        Solver loop time:                 	100 	s
-                        Solver post processing time:      	4 	s
+                        Matrix calculation time:          	18 	s
+                        Solver setup time:                	2 	s
+                        Solver loop time:                 	308 	s
+                        Solver post processing time:      	2 	s
+                        Processing of broadband farfields:	1      	s
                                                           	------------
-                        Total solver time:                	171 	s  ( = 0 h, 2 m, 51 s )
+                        Total solver time:                	331 	s  ( = 0 h, 5 m, 31 s )
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  
+28/Jul/2020 19:52:31  
                         Adaptive port meshing time:          	0      	s
-                        Total solver time (all cycles):      	171    	s  ( = 0 h, 2 m, 51 s )
+                        Total solver time (all cycles):      	331    	s  ( = 0 h, 5 m, 31 s )
                         solver initialization and clean-up:  	2      	s
                                                              	------------
-                        Total simulation time:               	173    	s  ( = 0 h, 2 m, 53 s )
+                        Total simulation time:               	333    	s  ( = 0 h, 5 m, 33 s )
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:36  Solver finished at: 10:26 AM Tuesday, 28. July 2020
+28/Jul/2020 19:52:31  Solver finished at: 07:52 PM Tuesday, 28. July 2020
                       
                       
                       
                       ------------------------------------------------------------------------------
-28/Jul/2020 10:26:40  Creating parametric 1D results for Run ID 16
+28/Jul/2020 19:52:45  Creating parametric 1D results for Run ID 3
                       
                       ------------------------------------------------------------------------------
