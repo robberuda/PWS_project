@@ -1262,7 +1262,7 @@ End With
 '@ define frequency range
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Solver.FrequencyRange "920", "980" 
+Solver.FrequencyRange "920", "980"
 
 '@ farfield plot options
 
@@ -1331,16 +1331,13 @@ With FarfieldPlot
      .AddCut "lateral", "0", "1"  
      .AddCut "lateral", "90", "1"  
      .AddCut "polar", "90", "1"  
-
      .StoreSettings
-End With 
-
+End With
 
 '@ switch working plane
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Plot.DrawWorkplane "false" 
-
+Plot.DrawWorkplane "false"
 
 '@ farfield plot options
 
@@ -1409,14 +1406,81 @@ With FarfieldPlot
      .AddCut "lateral", "0", "1"  
      .AddCut "lateral", "90", "1"  
      .AddCut "polar", "90", "1"  
-
      .StoreSettings
-End With 
-
+End With
 
 '@ switch working plane
 
 '[VERSION]2019.0|28.0.2|20180920[/VERSION]
-Plot.DrawWorkplane "false" 
+Plot.DrawWorkplane "false"
 
+'@ farfield plot options
+
+'[VERSION]2019.0|28.0.2|20180920[/VERSION]
+With FarfieldPlot 
+     .Plottype "Cartesian" 
+     .Vary "angle1" 
+     .Theta "0" 
+     .Phi "0" 
+     .Step "1" 
+     .Step2 "1" 
+     .SetLockSteps "True" 
+     .SetPlotRangeOnly "False" 
+     .SetThetaStart "0" 
+     .SetThetaEnd "180" 
+     .SetPhiStart "0" 
+     .SetPhiEnd "360" 
+     .SetTheta360 "True" 
+     .SymmetricRange "True" 
+     .SetTimeDomainFF "False" 
+     .SetFrequency "953" 
+     .SetTime "0" 
+     .SetColorByValue "True" 
+     .DrawStepLines "False" 
+     .DrawIsoLongitudeLatitudeLines "False" 
+     .ShowStructure "False" 
+     .ShowStructureProfile "False" 
+     .SetStructureTransparent "False" 
+     .SetFarfieldTransparent "False" 
+     .SetSpecials "enablepolarextralines" 
+     .SetPlotMode "Efield" 
+     .Distance "1" 
+     .UseFarfieldApproximation "True" 
+     .SetScaleLinear "False" 
+     .SetLogRange "40" 
+     .SetLogNorm "0" 
+     .DBUnit "0" 
+     .SetMaxReferenceMode "abs" 
+     .EnableFixPlotMaximum "False" 
+     .SetFixPlotMaximumValue "1" 
+     .SetInverseAxialRatio "False" 
+     .SetAxesType "user" 
+     .SetAntennaType "directional_linear" 
+     .Phistart "1.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .Thetastart "0.000000e+00", "0.000000e+00", "1.000000e+00" 
+     .PolarizationVector "0.000000e+00", "1.000000e+00", "0.000000e+00" 
+     .SetCoordinateSystemType "spherical" 
+     .SetAutomaticCoordinateSystem "True" 
+     .SetPolarizationType "Linear" 
+     .SlantAngle 0.000000e+00 
+     .Origin "bbox" 
+     .Userorigin "0.000000e+00", "0.000000e+00", "0.000000e+00" 
+     .SetUserDecouplingPlane "False" 
+     .UseDecouplingPlane "False" 
+     .DecouplingPlaneAxis "X" 
+     .DecouplingPlanePosition "0.000000e+00" 
+     .LossyGround "False" 
+     .GroundEpsilon "1" 
+     .GroundKappa "0" 
+     .EnablePhaseCenterCalculation "False" 
+     .SetPhaseCenterAngularLimit "3.000000e+01" 
+     .SetPhaseCenterComponent "boresight" 
+     .SetPhaseCenterPlane "both" 
+     .ShowPhaseCenter "True" 
+     .ClearCuts 
+     .AddCut "lateral", "0", "1"  
+     .AddCut "lateral", "90", "1"  
+     .AddCut "polar", "90", "1"  
+     .StoreSettings
+End With 
 

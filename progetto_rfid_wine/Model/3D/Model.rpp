@@ -1,7 +1,7 @@
 9
 0
 0
-8
+14
 tau
 Mix Template Results
 1
@@ -11,6 +11,24 @@ P
 ED10
 1
 tau
+tau (953 MHz)
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+tau (953 MHz)
+Rirr (953 MHz)
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+Rirr (953 MHz)
 lambda
 Mix Template Results
 1
@@ -20,6 +38,15 @@ P
 ED10
 1
 lambda
+lambda (953MHz)
+Mix Template Results
+1
+0D
+General 1D
+P
+ED10
+1
+lambda (953MHz)
 potenza_W
 Mix Template Results
 1
@@ -74,7 +101,34 @@ P
 ED10
 1
 omega
-9
+Directivity, constant Phi=0_1
+Farfield Result
+1
+1D
+Farfield and Antenna Properties
+P
+ED10
+1
+Directivity, constant Phi=0_1
+direttività lineare
+Mix Template Results
+1
+1D
+General 1D
+P
+ED10
+1
+direttività lineare
+modulo h efficace (theta)
+Mix Template Results
+1
+1D
+General 1D
+P
+ED10
+1
+modulo h efficace (theta)
+16
 1:Tables\1D Results\tau
 2:Tables\0D Results\lambda_953MHz_m
 3:Tables\0D Results\potenza_W
@@ -84,3 +138,10 @@ omega
 7:Tables\1D Results\omega
 8:Tables\1D Results\lambda
 9:Tables\1D Results\gain_linear
+10:Tables\1D Results\direttività lineare
+11:Tables\0D Results\lambda (953MHz)
+12:Tables\1D Results\modulo h efficace (theta)
+13:Tables\0D Results\tau (953 MHz)
+14:Tables\0D Results\Rirr (953 MHz)
+15:Tables\0D Results\h efficace (theta)
+16:Tables\0D Results\Mix 0D

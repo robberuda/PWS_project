@@ -9,18 +9,24 @@ Units settings:
 
 ----------------------------------------------------------------------------------------
 
-Template based postprocessing started at: 07:52 PM Tuesday, 28. July 2020
+Template based postprocessing started at: 12:41 PM Friday, 18. September 2020
 
   Evaluating 'tau': 0 s
+  Evaluating 'tau (953 MHz)': 0 s
+  Evaluating 'Rirr (953 MHz)': 0 s
   Evaluating 'lambda': 0 s
+  Evaluating 'lambda (953MHz)': 0 s
   Evaluating 'potenza_W': 0 s
   Evaluating 'EIRP': 0 s
-  Evaluating 'Gain (IEEE),3D,Max. Value (Solid Angle)': 9 s
+  Evaluating 'Gain (IEEE),3D,Max. Value (Solid Angle)': 16 s
   Evaluating 'gain_linear': 0 s
-  Evaluating 'distanza massima tag': 0 s
+  Evaluating 'distanza massima [metri]': 0 s
   Evaluating 'omega': 0 s
+  Evaluating 'Directivity, constant Phi=0_1': 0 s
+  Evaluating 'direttività lineare': 0 s
+  Evaluating 'modulo h efficace (theta)': 0 s
 
-  Total time: 11 s  ( = 0 h, 0 m, 11 s )
+  Total time: 21 s  ( = 0 h, 0 m, 21 s )
 
-Template based postprocessing finished at: 07:52 PM Tuesday, 28. July 2020
+Template based postprocessing finished at: 12:42 PM Friday, 18. September 2020
 ----------------------------------------------------------------------------------------

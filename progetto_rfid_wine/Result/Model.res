@@ -1,5 +1,5 @@
 MWS Result File Version 20150206
-size=i:271
+size=i:284
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -7,7 +7,23 @@ visibility=s:hidden
 creation=s:internal
 lifetime=s:rebuild
 result=s:1
-files=s:distanza massima [metri].rd1
+files=s:modulo h efficace (theta).rd1
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:direttività lineare.rd1
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:Directivity, constant Phi=0_1.rd1
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -16,6 +32,14 @@ creation=s:internal
 lifetime=s:rebuild
 result=s:1
 files=s:omega.rd1
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:distanza massima [metri].rd1
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -55,7 +79,31 @@ visibility=s:hidden
 creation=s:internal
 lifetime=s:rebuild
 result=s:1
+files=s:lambda (953MHz).rd0
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
 files=s:lambda.rd1
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:Rirr (953 MHz).rd0
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:tau (953 MHz).rd0
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -1462,6 +1510,93 @@ parametric=s:P
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
 
+type=s:TABLE
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\distanza massima [metri]
+files=s:distanza massima [metri].rt1
+files=s:distanza massima [metri].rd1
+title=s:distanza massima [metri]
+ylabel=s:distanza massima (f)
+
+type=s:TABLE
+subtype=s:farfield polar linear
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\Directivity, constant Phi=0_1
+files=s:Directivity, constant Phi=0_1.rt1
+files=s:Directivity, constant Phi=0_1.rd1
+title=s:Directivity, constant Phi=0_1
+xlabel=s:Theta / Degree
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\lambda (953MHz)
+files=s:lambda (953MHz).rt0
+files=s:lambda (953MHz).rd0
+title=s:lambda (953MHz)
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\tau (953 MHz)
+files=s:tau (953 MHz).rt0
+files=s:tau (953 MHz).rd0
+title=s:tau (953 MHz)
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\0D Results\Rirr (953 MHz)
+files=s:Rirr (953 MHz).rt0
+files=s:Rirr (953 MHz).rd0
+title=s:Rirr (953 MHz)
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\direttività lineare
+files=s:direttività lineare.rt1
+files=s:direttività lineare.rd1
+title=s:direttività lineare
+
+type=s:TABLE
+subtype=s:user
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+treepath=s:Tables\1D Results\modulo h efficace (theta)
+files=s:modulo h efficace (theta).rt1
+files=s:modulo h efficace (theta).rd1
+title=s:modulo h efficace (theta)
+ylabel=s:|h(Theta)|
+
 type=s:XYSIGNAL2
 subtype=s:user
 problemclass=s:Low Frequency:4:3
@@ -2519,6 +2654,19 @@ result=s:1
 treepath=s:1D Results\Reference Impedance\ZRef 1(1)
 files=s:ZRef1(1).sig
 
+type=s:XYSIGNAL2
+subtype=s:farfield cartesian
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:solverstart
+result=s:0
+treepath=s:Farfields\farfield (f=953) [1]\farfield (f=953) [1]
+files=s:farfield (f=953) [1].sig
+xlabel=s:Theta / Degree
+ylabel=s:dB(V/m)
+title=s:Farfield E-Field(r=1m) Abs (Phi=0)
+
 type=s:RESULT_0D
 problemclass=s::8:1000
 visibility=s:hidden
@@ -2527,6 +2675,20 @@ lifetime=s:rebuild
 result=s:1
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
+
+type=s:XYSIGNAL2
+subtype=s:farfield cartesian
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:0
+parametric=s:P
+treepath=s:Farfields\farfield (f=953) [1]\farfield (f=953) [1]
+files=s:farfield (f=953) [1].sig
+xlabel=s:Theta / Degree
+ylabel=s:dB(V/m)
+title=s:Farfield E-Field(r=1m) Abs (Phi=0)
 
 type=s:XYSIGNAL2
 subtype=s:user
@@ -2597,30 +2759,4 @@ lifetime=s:persistent
 result=s:1
 treepath=s:1D Results\Materials\Aluminum\Surface Impedance\Z'' (Theory)
 files=s:Aluminum_Z_datalist_im.sig
-
-type=s:TABLE
-subtype=s:complex
-problemclass=s::8:1000
-visibility=s:visible
-creation=s:internal
-lifetime=s:surviveparchange
-result=s:1
-treepath=s:Tables\1D Results\distanza massima [metri]
-files=s:distanza massima [metri].rt1
-files=s:distanza massima [metri].rd1
-title=s:distanza massima [metri]
-ylabel=s:distanza massima (f)
-
-type=s:FARFIELDPOLAR
-subtype=s:farfield polar linear
-problemclass=s::8:1000
-visibility=s:hidden
-creation=s:internal
-lifetime=s:solverstart
-result=s:0
-treepath=s:Farfields\farfield (f=953) [1]\farfield (f=953) [1]
-files=s:farfield (f=953) [1].sig
-xlabel=s:Theta / Degree
-ylabel=s:dBi
-title=s:Farfield Directivity Abs (Phi=90)
 
